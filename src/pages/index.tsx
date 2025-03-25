@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ThemeToggle } from "../components/Theme";
+import { ThemeToggle } from "../utils/Theme";
 import { cardItemsData } from "../data/cards";
 
 // Reusable component for standard card item

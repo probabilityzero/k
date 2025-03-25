@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ThemeToggle } from './Theme';
+import { ThemeToggle } from '../utils/Theme';
 
 export const Footer: React.FC = () => {
   return (
