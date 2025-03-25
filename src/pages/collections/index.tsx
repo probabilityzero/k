@@ -20,70 +20,85 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
 
   return (
     <section className="my-8">
-      <div className="mb-4">
-        <Link
-          to={`/${collection}`}
-          className="group inline-flex items-center text-end justify-end text-3xl font-bold"
-        >
-          {title}
-          <span className="group-hover:opacity-80 ml-3 text-sm opacity-0 transition-all duration-150">
-            open
-          </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-80 transition-all duration-200"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {data.map((art) => (
+      <div className="flex flex-col lg:flex-row">
+        {/* Header Section */}
+        <div className="mb-4 lg:mb-0 lg:mr-6 lg:w-1/4 flex items-center">
           <Link
-            key={art.id}
-            to={`/No.${art.id}`}
-            className="block border rounded overflow-hidden hover:shadow-lg transition-shadow"
+            to={`/${collection}`}
+            className="group inline-flex items-center text-3xl font-bold"
           >
-            {art.mediaItems && art.mediaItems.length > 0 ? (
-              art.mediaItems[0].type === "video" ? (
-                <video className="w-full h-48 object-cover" muted>
-                  <source src={art.mediaItems[0].url} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              ) : (
-                <img
-                  src={art.mediaItems[0].url}
-                  alt={art.mediaItems[0].alt || art.title}
-                  className="w-full h-48 object-cover"
-                />
-              )
-            ) : art.imageUrl ? (
-              <img
-                src={art.imageUrl}
-                alt={art.title}
-                className="w-full h-48 object-cover"
+            {title}
+            <span className="group-hover:opacity-80 ml-3 text-sm opacity-0 transition-all duration-150">
+              open
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-80 transition-all duration-200"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 5l7 7-7 7"
               />
-            ) : art.videoUrl ? (
-              <video className="w-full h-48 object-cover" muted>
-                <source src={art.videoUrl} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">No Media</span>
-              </div>
-            )}
-            <div className="p-4">
-              <h3 className="text-xl font-semibold">{art.title}</h3>
-              {art.subtitle && (
-                <p className="text-sm text-gray-600">{art.subtitle}</p>
-              )}
-            </div>
+            </svg>
           </Link>
-        ))}
+        </div>
+
+        {/* Items Grid */}
+        <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {data.map((art) => (
+            <Link
+              key={art.id}
+              to={`/No.${art.id}`}
+              className="block border-opacity-50 rounded overflow-hidden hover:shadow-md transition-shadow"
+            >
+              {/* Square container */}
+              <div className="w-full aspect-square overflow-hidden">
+                {art.mediaItems && art.mediaItems.length > 0 ? (
+                  art.mediaItems[0].type === "video" ? (
+                    <video className="w-full h-full object-cover" muted>
+                      <source src={art.mediaItems[0].url} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={art.mediaItems[0].url}
+                      alt={art.mediaItems[0].alt || art.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )
+                ) : art.imageUrl ? (
+                  <img
+                    src={art.imageUrl}
+                    alt={art.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : art.videoUrl ? (
+                  <video className="w-full h-full object-cover" muted>
+                    <source src={art.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                    <span className="text-red-500">No Media</span>
+                  </div>
+                )}
+              </div>
+              <div className="p-1">
+                <h3 className="text-md font-medium">{art.title}</h3>
+                {art.subtitle && (
+                  <p className="text-xs group-hover:opacity-75 opacity-0">
+                    {art.subtitle}
+                  </p>
+                )}
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -98,8 +113,7 @@ const AllCollections: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              'url("https://www.gifcen.com/wp-content/uploads/2022/05/black-hole-gif-7.gif")',
+            backgroundImage: 'url("")',
           }}
         />
         {/* Gradient overlay fading toward the bottom */}

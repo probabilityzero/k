@@ -5,23 +5,23 @@
 @tailwind utilities;
 
 :root {
-  --bg: #fff;
+  --bg: #f8f8f8;
   --text: #000;
 }
 
 [data-theme='dark'] {
-  --bg: #000;
+  --bg: #080808;
   --text: #fff;
 }
 
 [data-theme='gray'] {
-  --bg: #474747;   
-  --text: #b9b6b6; 
+  --bg: #FF6FFF;   
+  --text: #32CD32; 
 }
 
 body {
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.2s, color 0.3s;
   font-family: 'Chakra Petch', monospace;
 }
