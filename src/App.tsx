@@ -1,6 +1,4 @@
 import { ThemeProvider } from "./hooks/useTheme";
-import { Footer } from "./components/Footer";
-import { HomeFooter } from "./components/HomeFooter"; // Import your HomeFooter component
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages";
 import Machines from "./pages/collections/machines";
@@ -11,6 +9,8 @@ import Exhibitions from "./pages/exhibitions";
 import About from "./pages/about";
 import Collections from "./pages/collections";
 import ArtPage from "./pages/[artUrl]";
+import { Footer, HomeFooter } from './components/Footer';
+
 
 function App() {
   const location = useLocation();
