@@ -12,7 +12,7 @@ const ArtShowcase: React.FC<ArtDisplayProps> = ({ art }) => {
   const isEven = Number(id) % 2 === 0;
 
   return (
-    <div className="max-w-5xl mx-auto p-4">
+    <div className="max-w-7xl mx-auto p-4">
       {isEven ? (
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/2">
