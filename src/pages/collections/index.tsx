@@ -23,10 +23,12 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
       <div className="mb-4">
         <Link
           to={`/${collection}`}
-          className="group inline-flex items-center justify-end text-3xl font-bold"
+          className="group inline-flex items-center text-end justify-end text-3xl font-bold"
         >
           {title}
-          <span className="group-hover:opacity-80 ml-3 text-sm opacity-0 transition-all duration-150">open</span>
+          <span className="group-hover:opacity-80 ml-3 text-sm opacity-0 transition-all duration-150">
+            open
+          </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-80 transition-all duration-200"
@@ -38,7 +40,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
           </svg>
         </Link>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.map((art) => (
           <Link
             key={art.id}
@@ -91,7 +93,7 @@ const AllCollections: React.FC = () => {
   return (
     <div>
       {/* Inline Banner */}
-      <div className="relative w-full h-[50vh] flex items-center justify-center">
+      <div className="relative w-full h-[50vh] flex flex-col items-center justify-center">
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -103,7 +105,7 @@ const AllCollections: React.FC = () => {
         {/* Gradient overlay fading toward the bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent" />
         {/* Centered text */}
-        <div className="relative z-10 text-end text-white px-4">
+        <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-3xl md:text-5xl font-bold inline-block bg-black bg-opacity-50 px-4 py-2">
             collections
           </h1>
