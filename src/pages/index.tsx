@@ -71,14 +71,21 @@ const Home: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col">
       {/* Header / Logo */}
       <header className="flex justify-center items-center py-8">
-        <div className="text-4xl font-bold">K</div>
+        <div className="text-4xl"
+            // style={{
+            //   fontFamily: "'Raleway Dots', sans-serif",
+            //   fontSize: "2.5rem",
+            // }}
+         >
+          K
+        </div>
       </header>
 
       {/* Main content with extra bottom padding */}
-      <main className="flex pt-0 lg:pt-10 relative pb-24">
+      <main className="flex py-10 relative">
         <div className="max-w-7xl mx-auto px-4">
           {/* Upper row items */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8 pb-6 lg:pb-8">

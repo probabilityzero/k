@@ -5,11 +5,21 @@ import { ThemeToggle } from '../utils/Theme';
 export const HomeFooter: React.FC = () => {
   return (
     <footer className="p-4 relative">
-      <div className="container mx-auto relative py-2">
-        {/* Centered ThemeToggle */}
-        <div className="absolute inset-x-0 flex justify-center pointer-events-none">
-          <div className="pointer-events-auto">
-            <ThemeToggle />
+      <div className="container mx-auto relative">
+        {/* Left and Right Navigation Container */}
+        <div className="flex justify-between items-center w-full py-1">
+          {/* Left Navigation */}
+          <div className="flex space-x-2 md:space-x-4">
+            <Link to="/" className="hover:underline">
+             ​
+            </Link>
+          </div>
+
+          {/* Centered ThemeToggle */}
+          <div className="absolute inset-x-0 flex justify-center pointer-events-none">
+            <div className="pointer-events-auto">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>
@@ -22,11 +32,12 @@ export const Footer: React.FC = () => {
     <footer className="p-4 relative">
       <div className="container mx-auto relative">
         {/* Left and Right Navigation Container */}
-        <div className="flex justify-between items-center w-full py-2">
+        <div className="flex justify-between items-center w-full py-1">
           {/* Left Navigation */}
           <div className="flex space-x-2 md:space-x-4">
-            <Link to="/" className="hover:underline">
-              K
+            <Link to="/" className="hover:underline font-light">
+              {/* /K / */}
+              ⠀K⠀
             </Link>
             <span>∶</span>
             <Link to="/collections" className="hover:underline">
