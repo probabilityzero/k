@@ -97,13 +97,13 @@ const AllCollections: React.FC = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url("https://via.placeholder.com/1920x1080?text=Banner+Image")',
+              'url("https://www.gifcen.com/wp-content/uploads/2022/05/black-hole-gif-7.gif")',
           }}
         />
         {/* Gradient overlay fading toward the bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent" />
         {/* Centered text */}
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="relative z-10 text-end text-white px-4">
           <h1 className="text-3xl md:text-5xl font-bold inline-block bg-black bg-opacity-50 px-4 py-2">
             collections
           </h1>

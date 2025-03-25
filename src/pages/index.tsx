@@ -41,7 +41,7 @@ const CardWideItems: React.FC<CardItemProps> = ({ to, imgSrc, alt, label }) => {
         alt={alt}
         className="h-40 w-[344px] md:h-48 md:w-[416px] lg:h-56 lg:w-[480px] object-cover"
       />
-      <span className="absolute bg-black text-white text-lg uppercase tracking-wider p-1">
+      <span className="absolute bg-black text-white font-medium text-lg uppercase tracking-wider p-1">
         {label.toLowerCase()}
       </span>
     </Link>
