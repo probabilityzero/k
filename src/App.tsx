@@ -1,5 +1,6 @@
 import { ThemeProvider } from "./hooks/useTheme";
 import { Footer } from "./components/Footer";
+import { HomeFooter } from "./components/HomeFooter"; // Import your HomeFooter component
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages";
 import Machines from "./pages/collections/machines";
@@ -30,7 +31,7 @@ function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </div>
-        {location.pathname !== "/" && <Footer />}
+        {location.pathname === "/" ? <HomeFooter /> : <Footer />}
       </div>
     </ThemeProvider>
   );

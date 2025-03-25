@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ThemeToggle } from "../utils/Theme";
+// import { ThemeToggle } from "../utils/Theme";
 import { cardItemsData } from "../data/cards";
 
 // Reusable component for standard card item
@@ -129,7 +129,7 @@ const Home: React.FC = () => {
       </main>
 
       {/* ThemeToggle fixed at bottom without overlapping due to main's extra padding */}
-      <footer className="p-4 relative">
+      {/* <footer className="p-4 relative">
         <div className="container mx-auto relative">
           <div className="flex justify-between items-center w-full py-2">
             <div className="absolute inset-x-0 flex justify-center pointer-events-none">
@@ -139,7 +139,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

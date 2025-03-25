@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../utils/Theme';
 
-export const Footer: React.FC = () => {
+export const HomeFooter: React.FC = () => {
   return (
     <footer className="p-4 relative">
       <div className="container mx-auto relative">
@@ -10,7 +9,7 @@ export const Footer: React.FC = () => {
         <div className="flex justify-between items-center w-full py-2">
 
           {/* Left Navigation */}
-          <div className="flex space-x-2 md:space-x-4">
+          {/* <div className="flex space-x-2 md:space-x-4">
             <Link to="/" className="hover:underline">  K  </Link>
             <span>∶</span>
             <Link to="/collections" className="hover:underline">collections</Link>
@@ -20,7 +19,7 @@ export const Footer: React.FC = () => {
               <Link to="/audiovisual" className="hover:underline">audiovisual</Link>
             </div>
             <Link to="/miscellaneous" className="hover:underline">misc</Link>
-          </div>
+          </div> */}
         
         {/* Centered ThemeToggle */}
         <div className="absolute inset-x-0 flex justify-center pointer-events-none">
@@ -30,10 +29,10 @@ export const Footer: React.FC = () => {
         </div>
 
           {/* Right Navigation */}
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <Link to="/exhibitions" className="hover:underline">exhibitions</Link>
             <Link to="/about" className="hover:underline">about</Link>
-          </div>
+          </div> */}
         </div>
 
       </div>
@@ -41,5 +40,4 @@ export const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
-
+export default HomeFooter;
