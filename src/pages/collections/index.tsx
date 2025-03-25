@@ -25,7 +25,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
           to={`/${collection}`}
           className="group inline-flex items-center justify-end text-3xl font-bold"
         >
-          {title.toLowerCase()}
+          {title}
           <span className="group-hover:opacity-80 ml-3 text-sm opacity-0 transition-all duration-150">open</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -115,10 +115,10 @@ const AllCollections: React.FC = () => {
 
       {/* Collection sections start right below the banner */}
       <div className="max-w-6xl mx-auto p-4">
-        <CollectionSection title="machines" collection="machines" />
-        <CollectionSection title="patterns" collection="patterns" />
-        <CollectionSection title="audiovisual" collection="audiovisual" />
-        <CollectionSection title="miscellaneous" collection="misc" />
+        <CollectionSection title="Machines" collection="machines" />
+        <CollectionSection title="Patterns" collection="patterns" />
+        <CollectionSection title="Audiovisual" collection="audiovisual" />
+        <CollectionSection title="Miscellaneous" collection="misc" />
       </div>
     </div>
   );
