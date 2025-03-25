@@ -1,7 +1,67 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { ThemeToggle } from "../utils/Theme";
-import { cardItemsData } from "../data/cards";
+// import { cardItemsData } from "../data/cards";
+
+export interface CardsData {
+  to: string;
+  imgSrc: string;
+  alt: string;
+  label: string;
+  wide?: boolean; // Flag to indicate wide card usage
+}
+
+export const cardItemsData: CardsData[] = [
+  {
+    to: "/collections",
+    imgSrc:
+      "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
+    alt: "Collections",
+    label: "collections",
+  },
+  {
+    to: "/collections/machines",
+    imgSrc:
+      "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
+    alt: "Machines",
+    label: "machines",
+  },
+  {
+    to: "/collections/patterns",
+    imgSrc:
+      "https://ipfs.io/ipfs/QmW4ZfkBhNw8pFHD5tMfrP9ZvPA2aDy8ur2e4pafiSjkTJ",
+    alt: "Patterns",
+    label: "patterns",
+  },
+  {
+    to: "/collections/audiovisual",
+    imgSrc:
+      "https://ipfs.io/ipfs/QmehS5B3bhhYogej5BUkcSYeUT78MmTGkNNwYgR3jJ6Gc7",
+    alt: "Audiovisual",
+    label: "audiovisual",
+  },
+  {
+    to: "/miscellaneous",
+    imgSrc:
+      "https://res.cloudinary.com/nifty-gateway/image/upload/v1684745617/publishers/ina-vare/67816/91345/Kerim%20Safa%20-%20Irregular%20Liquid%20-%20Kerim%20Safa.gif",
+    alt: "Miscellaneous",
+    label: "miscellaneous",
+  },
+  {
+    to: "/exhibitions",
+    imgSrc:
+      "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
+    alt: "Exhibitions",
+    label: "exhibitions",
+  },
+  {
+    to: "/about",
+    imgSrc:
+      "https://ipfs.io/ipfs/QmWEZphHGwcTKPBKVgnM5Q4cUPytdhCAyrq7uvtydjbkcP",
+    alt: "About",
+    label: "about",
+  },
+];
 
 // Reusable component for standard card item
 interface CardItemProps {
@@ -74,12 +134,7 @@ const Home: React.FC = () => {
     <div className="flex flex-col">
       {/* Header / Logo */}
       <header className="flex justify-center items-center py-8">
-        <div className="text-4xl"
-            // style={{
-            //   fontFamily: "'Raleway Dots', sans-serif",
-            //   fontSize: "2.5rem",
-            // }}
-         >
+        <div className="text-4xl font-bold">
           K
         </div>
       </header>
@@ -133,20 +188,7 @@ const Home: React.FC = () => {
             )}
           </div>
         </div>
-      </main>
-
-      {/* ThemeToggle fixed at bottom without overlapping due to main's extra padding */}
-      {/* <footer className="p-4 relative">
-        <div className="container mx-auto relative">
-          <div className="flex justify-between items-center w-full py-2">
-            <div className="absolute inset-x-0 flex justify-center pointer-events-none">
-              <div className="pointer-events-auto">
-                <ThemeToggle />
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer> */}
+      </main> 
     </div>
   );
 };

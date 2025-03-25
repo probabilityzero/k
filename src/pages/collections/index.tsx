@@ -24,7 +24,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         {/* Header Section */}
         <div className="mb-4 z-10 lg:top-10 lg:mb-0 lg:mr-6 lg:w-1/6 lg:sticky lg:pb-32 items-start">
           <Link
-            to={`/${collectionUrl}`}
+            to={`/collections/${collectionUrl}`}
             className="group inline-flex items-baseline text-3xl font-bold"
           >
             {title}

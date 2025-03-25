@@ -1,15 +1,17 @@
 import { ThemeProvider } from "./hooks/useTheme";
 import { Route, Routes, useLocation } from "react-router-dom";
+import { Footer, HomeFooter } from './components/Footer';
 import Home from "./pages";
-import Machines from "./pages/collections/machines";
-import Patterns from "./pages/collections/patterns";
-import Audiovisual from "./pages/collections/audiovisuals";
-import Miscellaneous from "./pages/collections/miscellaneous";
+import ArtPage from "./pages/[artUrl]";
+
+import Collections from "./pages/collections";
+  import Machines from "./pages/collections/machines";
+  import Patterns from "./pages/collections/patterns";
+  import Audiovisual from "./pages/collections/audiovisuals";
+  import Miscellaneous from "./pages/collections/miscellaneous";
+
 import Exhibitions from "./pages/exhibitions";
 import About from "./pages/about";
-import Collections from "./pages/collections";
-import ArtPage from "./pages/[artUrl]";
-import { Footer, HomeFooter } from './components/Footer';
 
 
 function App() {
@@ -23,9 +25,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/:artUrl" element={<ArtPage />} />
             <Route path="/collections" element={<Collections />} />
-            <Route path="/machines" element={<Machines />} />
-            <Route path="/patterns" element={<Patterns />} />
-            <Route path="/audiovisual" element={<Audiovisual />} />
+            <Route path="/collections/machines" element={<Machines />} />
+            <Route path="/collections/patterns" element={<Patterns />} />
+            <Route path="/collections/audiovisual" element={<Audiovisual />} />
             <Route path="/miscellaneous" element={<Miscellaneous />} />
             <Route path="/exhibitions" element={<Exhibitions />} />
             <Route path="/about" element={<About />} />

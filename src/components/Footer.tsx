@@ -44,13 +44,13 @@ export const Footer: React.FC = () => {
               collections
             </Link>
             <div className="hidden space-x-4">
-              <Link to="/machines" className="hover:underline">
+              <Link to="/collections/machines" className="hover:underline">
                 machines
               </Link>
-              <Link to="/patterns" className="hover:underline">
+              <Link to="/collections/patterns" className="hover:underline">
                 patterns
               </Link>
-              <Link to="/audiovisual" className="hover:underline">
+              <Link to="/collections/audiovisual" className="hover:underline">
                 audiovisual
               </Link>
             </div>
