@@ -8,7 +8,7 @@ interface ArtHeaderProps {
 const ArtHeader: React.FC<ArtHeaderProps> = ({ art }) => {
   return (
     <header className="mb-4">
-      <h2 className="text-2xl font-bold">
+      <h2 className="text-2xl font-bold py-2">
         {art.title} (No.{art.id})
       </h2>
     </header>
