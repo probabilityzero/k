@@ -50,7 +50,6 @@ const CardWideItems: React.FC<CardItemProps> = ({ to, imgSrc, alt, label }) => {
 
 const Home: React.FC = () => {
   useEffect(() => {
-    // Scroll to the top of the page or to a specific section ID
     const section = document.getElementById("target-section");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -59,9 +58,9 @@ const Home: React.FC = () => {
     }
   }, []);
 
-  // Upper row: collections, machines, patterns, audiovisual, misc
+  // Upper row: collections, machines, patterns, audiovisual, miscellaneous
   const upperRowItems = cardItemsData.filter((item) =>
-    ["collections", "machines", "patterns", "audiovisual", "misc"].includes(
+    ["collections", "machines", "patterns", "audiovisual", "miscellaneous"].includes(
       item.label
     )
   );

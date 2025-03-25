@@ -6,31 +6,28 @@ import { ArtData, artCollection } from "../../data/library";
 
 interface CollectionSectionProps {
   title: string;
-  collection: "machines" | "patterns" | "audiovisual" | "misc";
+  collection: "machines" | "patterns" | "audiovisual" | "miscellaneous";
 }
 
 const CollectionSection: React.FC<CollectionSectionProps> = ({
   title,
-  collection,
+  collection: collectionUrl,
 }) => {
   // Filter data by collection type
   const data: ArtData[] = artCollection.filter(
-    (art) => art.collection === collection
+    (art) => art.collection === collectionUrl
   );
 
   return (
     <section className="my-8">
       <div className="flex flex-col lg:flex-row">
         {/* Header Section */}
-        <div className="mb-4 lg:mb-0 lg:mr-6 lg:w-1/6 flex items-start">
+        <div className="mb-4 z-10 lg:top-10 lg:mb-0 lg:mr-6 lg:w-1/6 lg:sticky lg:pb-32 items-start">
           <Link
-            to={`/${collection}`}
+            to={`/${collectionUrl}`}
             className="group inline-flex items-baseline text-3xl font-bold"
           >
             {title}
-            {/* <span className="group-hover:opacity-80 ml-3 text-sm opacity-0 transition-all duration-150">
-              open
-            </span> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-80 transition-all duration-200"
@@ -49,7 +46,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         </div>
 
         {/* Items Grid */}
-        <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="lg:w-5/6 grid grid-cols-1 md:grid-cols-2 gap-6">
           {data.map((art) => (
             <Link
               key={art.id}
@@ -106,7 +103,6 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
 
 const Collections: React.FC = () => {
   useEffect(() => {
-    // Scroll to the top of the page or to a specific section ID
     const section = document.getElementById("target-section");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -130,10 +126,10 @@ const Collections: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent" />
         {/* Centered text */}
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-3xl md:text-5xl font-bold inline-block">
+          <h1 className="text-3xl md:text-5xl font-bold inline-block px-2 py-1">
             collections
           </h1>
-          <p className="mt-4 text-lg md:text-2xl inline-block p-4 text-opacity-85">
+          <p className="mt-4 text-lg md:text-2xl inline-block px-2 py-1 max-w-3xl mx-auto text-opacity-85">
             all of the collections
           </p>
         </div>
@@ -144,7 +140,7 @@ const Collections: React.FC = () => {
         <CollectionSection title="Machines" collection="machines" />
         <CollectionSection title="Patterns" collection="patterns" />
         <CollectionSection title="Audiovisual" collection="audiovisual" />
-        <CollectionSection title="Miscellaneous" collection="misc" />
+        <CollectionSection title="Misc." collection="miscellaneous" />
       </div>
     </div>
   );

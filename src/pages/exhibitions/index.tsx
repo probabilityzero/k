@@ -4,12 +4,11 @@ import React, { useEffect } from "react";
 
 const Exhibitions: React.FC = () => {
   useEffect(() => {
-    // Scroll to the top of the page or to a specific section ID
     const section = document.getElementById("target-section");
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView(); 
     } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo(0, 0); 
     }
   }, []);
 
@@ -18,7 +17,7 @@ const Exhibitions: React.FC = () => {
       <img
         src="https://static.wikia.nocookie.net/3df97e1d-0285-476a-a951-a968d24d92a0/scale-to-width/755"
         alt="Exhibition"
-        className="grayscale opacity-75 transition-opacity duration-500 ease-in-out hover:opacity-100"
+        className="grayscale opacity-75 transition-opacity duration-1000 ease-in-out hover:opacity-100"
       />
     </div>
   );

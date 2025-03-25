@@ -9,14 +9,14 @@ const Miscellaneous: React.FC = () => {
   useEffect(() => {
     const section = document.getElementById("target-section");
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView(); 
     } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo(0, 0); 
     }
   }, []);
 
   const miscData: ArtData[] = artCollection.filter(
-    (item) => item.collection === "misc"
+    (item) => item.collection === "miscellaneous"
   );
 
   return (

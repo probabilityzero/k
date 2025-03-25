@@ -39,8 +39,8 @@ export const cardItemsData: CardsData[] = [
     to: "/miscellaneous",
     imgSrc:
       "https://res.cloudinary.com/nifty-gateway/image/upload/v1684745617/publishers/ina-vare/67816/91345/Kerim%20Safa%20-%20Irregular%20Liquid%20-%20Kerim%20Safa.gif",
-    alt: "Misc",
-    label: "misc",
+    alt: "Miscellaneous",
+    label: "miscellaneous",
   },
   {
     to: "/exhibitions",

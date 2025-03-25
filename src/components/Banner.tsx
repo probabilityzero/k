@@ -19,14 +19,14 @@ const Banner: React.FC<BannerProps> = ({ title, subtitle, bgImageUrl }) => {
 
       {/* Foreground text */}
       <div className="relative z-10 text-center font-bold text-white px-4 pb-10">
-        <div className="mb-4">
-          <h1 className="text-3xl md:text-5xl inline-block bg-black px-2 py-1">
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-3xl md:text-5xl font-bold inline-block px-2 py-1 bg-black">
             {title}
           </h1>
         </div>
         {subtitle && (
           <div>
-            <p className="text-lg md:text-2xl inline-block bg-black px-2 py-1 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg md:text-2xl inline-block px-2 py-1 max-w-3xl mx-auto text-opacity-85 bg-black">
               {subtitle}
             </p>
           </div>

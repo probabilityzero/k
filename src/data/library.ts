@@ -17,7 +17,7 @@ export interface SaleInfo {
 
 export interface ArtData {
   id: string; // 3-digit ID (e.g. "001", "002")
-  collection: "machines" | "patterns" | "audiovisual" | "misc";
+  collection: "machines" | "patterns" | "audiovisual" | "miscellaneous";
   title: string;
   subtitle?: string; // e.g. "Animation, 2025"
   description: string;
@@ -81,7 +81,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "004",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Abstract Echo",
     subtitle: "Misc, 2022",
     description: "A mysterious interplay of abstract forms and echoes.",
@@ -145,7 +145,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "008",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Surreal Whimsy",
     subtitle: "Misc, 2022",
     description: "A whimsical journey into the surreal.",
@@ -194,7 +194,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "012",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Ephemeral Moods",
     subtitle: "Misc, 2022",
     description: "Capturing transient moods through abstract imagery.",
@@ -250,7 +250,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "016",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Mystic Mirage",
     subtitle: "Misc, 2022",
     description: "An illusionary glimpse into a mystic world.",
@@ -303,7 +303,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "020",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Timeless Drift",
     subtitle: "Misc, 2022",
     description: "An artistic exploration of time and movement.",
@@ -349,7 +349,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "024",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Ephemeral Trace",
     subtitle: "Misc, 2022",
     description: "A fleeting trace of artistic memory captured in time.",
@@ -406,7 +406,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "028",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Whispering Mirage",
     subtitle: "Misc, 2022",
     description: "A quiet, reflective piece with dreamlike imagery.",
@@ -451,7 +451,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "032",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Serene Reflections",
     subtitle: "Misc, 2022",
     description: "Calm and serene visuals that reflect inner peace.",
@@ -500,7 +500,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "036",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Transient Visions",
     subtitle: "Misc, 2022",
     description: "A fleeting vision of modern abstract expression.",
@@ -553,7 +553,7 @@ export const artCollection: ArtData[] = [
   },
   {
     id: "040",
-    collection: "misc",
+    collection: "miscellaneous",
     title: "Kaleidoscopic Dreams",
     subtitle: "Misc, 2022",
     description: "Ever-changing dreams rendered in kaleidoscopic form.",
