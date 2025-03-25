@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "../utils/Theme";
 import { cardItemsData } from "../data/cards";
@@ -22,8 +22,8 @@ const CardItems: React.FC<CardItemProps> = ({ to, imgSrc, alt, label }) => {
         alt={alt}
         className="h-40 w-40 md:h-48 md:w-48 lg:h-52 lg:w-52 object-cover"
       />
-      <span className="absolute bg-black text-white text-lg uppercase tracking-wider p-1">
-        {label.toLowerCase()}
+      <span className="absolute bg-black text-white text-xl font-medium tracking-wider p-1">
+        {label}
       </span>
     </Link>
   );
@@ -41,24 +41,34 @@ const CardWideItems: React.FC<CardItemProps> = ({ to, imgSrc, alt, label }) => {
         alt={alt}
         className="h-40 w-[344px] md:h-48 md:w-[416px] lg:h-56 lg:w-[480px] object-cover"
       />
-      <span className="absolute bg-black text-white font-medium text-lg uppercase tracking-wider p-1">
-        {label.toLowerCase()}
+      <span className="absolute bg-black text-white font-medium text-lg tracking-wider p-1">
+        {label}
       </span>
     </Link>
   );
 };
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    // Scroll to the top of the page or to a specific section ID
+    const section = document.getElementById("target-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
+
   // Upper row: collections, machines, patterns, audiovisual, misc
   const upperRowItems = cardItemsData.filter((item) =>
     ["collections", "machines", "patterns", "audiovisual", "misc"].includes(
-      item.label.toLowerCase()
+      item.label
     )
   );
 
   // Second row: exhibitions and about
   const secondRowItems = cardItemsData.filter((item) =>
-    ["exhibitions", "about"].includes(item.label.toLowerCase())
+    ["exhibitions", "about"].includes(item.label)
   );
 
   return (

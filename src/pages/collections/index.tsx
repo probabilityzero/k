@@ -1,6 +1,6 @@
 // src/pages/AllCollections.tsx
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArtData, artCollection } from "../../data/library";
 
@@ -22,18 +22,18 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
     <section className="my-8">
       <div className="flex flex-col lg:flex-row">
         {/* Header Section */}
-        <div className="mb-4 lg:mb-0 lg:mr-6 lg:w-1/4 flex items-center">
+        <div className="mb-4 lg:mb-0 lg:mr-6 lg:w-1/4 flex items-start">
           <Link
             to={`/${collection}`}
-            className="group inline-flex items-center text-3xl font-bold"
+            className="group inline-flex items-baseline text-3xl font-bold"
           >
             {title}
-            <span className="group-hover:opacity-80 ml-3 text-sm opacity-0 transition-all duration-150">
+            {/* <span className="group-hover:opacity-80 ml-3 text-sm opacity-0 transition-all duration-150">
               open
-            </span>
+            </span> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-80 transition-all duration-200"
+              className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-80 transition-all duration-200"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -49,7 +49,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         </div>
 
         {/* Items Grid */}
-        <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-6">
           {data.map((art) => (
             <Link
               key={art.id}
@@ -89,9 +89,9 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
                 )}
               </div>
               <div className="p-1">
-                <h3 className="text-md font-medium">{art.title}</h3>
+                <h3 className="text-lg font-medium hover:underline">{art.title}</h3>
                 {art.subtitle && (
-                  <p className="text-xs group-hover:opacity-75 opacity-0">
+                  <p className="text-xs text-secondary">
                     {art.subtitle}
                   </p>
                 )}
@@ -105,6 +105,16 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
 };
 
 const AllCollections: React.FC = () => {
+  useEffect(() => {
+    // Scroll to the top of the page or to a specific section ID
+    const section = document.getElementById("target-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <div>
       {/* Inline Banner */}
@@ -120,10 +130,10 @@ const AllCollections: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent" />
         {/* Centered text */}
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-3xl md:text-5xl font-bold inline-block bg-black bg-opacity-50 px-4 py-2">
+          <h1 className="text-3xl md:text-5xl font-bold inline-block">
             collections
           </h1>
-          <p className="mt-4 text-lg md:text-2xl inline-block bg-black bg-opacity-50 px-4 py-2">
+          <p className="mt-4 text-lg md:text-2xl inline-block p-4 text-opacity-85">
             all of the collections
           </p>
         </div>

@@ -11,7 +11,8 @@ export const Footer: React.FC = () => {
 
           {/* Left Navigation */}
           <div className="flex space-x-2 md:space-x-4">
-            <Link to="/" className="hover:underline">home</Link>
+            <Link to="/" className="hover:underline">  K  </Link>
+            <span>∶</span>
             <Link to="/collections" className="hover:underline">collections</Link>
             <div className='hidden space-x-4'>
               <Link to="/machines" className="hover:underline">machines</Link>
