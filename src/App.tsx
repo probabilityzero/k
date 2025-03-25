@@ -1,6 +1,3 @@
-// src/App.tsx
-
-import React from "react";
 import { ThemeProvider } from "./hooks/useTheme";
 import { Footer } from "./components/Footer";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -8,11 +5,11 @@ import Home from "./pages";
 import Machines from "./pages/collections/machines";
 import Patterns from "./pages/collections/patterns";
 import Audiovisual from "./pages/collections/audiovisuals";
-import Misc from "./pages/collections/misc";
+import Miscellaneous from "./pages/collections/miscellaneous";
 import Exhibitions from "./pages/exhibitions";
 import About from "./pages/about";
-import ArtDetail from "./pages/no.000";
-import AllCollections from "./pages/collections";
+import Collections from "./pages/collections";
+import ArtPage from "./pages/[artUrl]";
 
 function App() {
   const location = useLocation();
@@ -23,14 +20,14 @@ function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/collections" element={<AllCollections />} />
+            <Route path="/:artUrl" element={<ArtPage />} />
+            <Route path="/collections" element={<Collections />} />
             <Route path="/machines" element={<Machines />} />
             <Route path="/patterns" element={<Patterns />} />
             <Route path="/audiovisual" element={<Audiovisual />} />
-            <Route path="/misc" element={<Misc />} />
+            <Route path="/miscellaneous" element={<Miscellaneous />} />
             <Route path="/exhibitions" element={<Exhibitions />} />
             <Route path="/about" element={<About />} />
-            <Route path="/No.:id" element={<ArtDetail />} />
           </Routes>
         </div>
         {location.pathname !== "/" && <Footer />}

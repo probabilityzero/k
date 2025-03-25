@@ -22,46 +22,46 @@ const Miscellaneous: React.FC = () => {
   return (
     <div className="min-h-screen">
       <Banner
-        title="misc"
+        title="Miscellaneous"
         subtitle="Mechanical wonders and futuristic technology"
         bgImageUrl="https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif"
       />
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {miscData.map((machine) => (
+          {miscData.map((data) => (
             <Link
-              key={machine.id}
-              to={`/No.${machine.id}`}
+              key={data.id}
+              to={`/No.${data.id}`}
               className="group block rounded-sm overflow-hidden"
             >
               {/* Square Container */}
               <div className="w-full aspect-square overflow-hidden">
-                {machine.mediaItems && machine.mediaItems.length > 0 ? (
-                  machine.mediaItems[0].type === "video" ? (
+                {data.mediaItems && data.mediaItems.length > 0 ? (
+                  data.mediaItems[0].type === "video" ? (
                     <video className="w-full h-full object-cover" muted>
                       <source
-                        src={machine.mediaItems[0].url}
+                        src={data.mediaItems[0].url}
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
                     </video>
                   ) : (
                     <img
-                      src={machine.mediaItems[0].url}
-                      alt={machine.mediaItems[0].alt || machine.title}
+                      src={data.mediaItems[0].url}
+                      alt={data.mediaItems[0].alt || data.title}
                       className="w-full h-full object-cover"
                     />
                   )
-                ) : machine.imageUrl ? (
+                ) : data.imageUrl ? (
                   <img
-                    src={machine.imageUrl}
-                    alt={machine.title}
+                    src={data.imageUrl}
+                    alt={data.title}
                     className="w-full h-full object-cover"
                   />
-                ) : machine.videoUrl ? (
+                ) : data.videoUrl ? (
                   <video className="w-full h-full object-cover" muted>
-                    <source src={machine.videoUrl} type="video/mp4" />
+                    <source src={data.videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 ) : (
@@ -74,10 +74,10 @@ const Miscellaneous: React.FC = () => {
               {/* Title and Subtitle */}
               <div className="p-1">
                 <h3 className="text-lg font-medium hover:underline">
-                  {machine.title}
+                  {data.title}
                 </h3>
-                {machine.subtitle && (
-                  <p className="text-xs text-opacity-60">{machine.subtitle}</p>
+                {data.subtitle && (
+                  <p className="text-xs text-opacity-60">{data.subtitle}</p>
                 )}
               </div>
             </Link>

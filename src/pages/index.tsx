@@ -130,11 +130,17 @@ const Home: React.FC = () => {
       </main>
 
       {/* ThemeToggle fixed at bottom without overlapping due to main's extra padding */}
-      <div className="fixed inset-x-0 bottom-0 flex justify-center py-6 items-center pointer-events-none">
-        <div className="pointer-events-auto">
-          <ThemeToggle />
+      <footer className="p-4 relative">
+        <div className="container mx-auto relative">
+          <div className="flex justify-between items-center w-full py-2">
+            <div className="absolute inset-x-0 flex justify-center pointer-events-none">
+              <div className="pointer-events-auto">
+                <ThemeToggle />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 };

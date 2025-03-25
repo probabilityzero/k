@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
               <Link to="/patterns" className="hover:underline">patterns</Link>
               <Link to="/audiovisual" className="hover:underline">audiovisual</Link>
             </div>
-            <Link to="/misc" className="hover:underline">misc</Link>
+            <Link to="/miscellaneous" className="hover:underline">misc</Link>
           </div>
         
         {/* Centered ThemeToggle */}

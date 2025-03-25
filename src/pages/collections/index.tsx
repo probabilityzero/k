@@ -104,7 +104,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
   );
 };
 
-const AllCollections: React.FC = () => {
+const Collections: React.FC = () => {
   useEffect(() => {
     // Scroll to the top of the page or to a specific section ID
     const section = document.getElementById("target-section");
@@ -150,4 +150,4 @@ const AllCollections: React.FC = () => {
   );
 };
 
-export default AllCollections;
+export default Collections;

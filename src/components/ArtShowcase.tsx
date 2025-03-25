@@ -7,7 +7,7 @@ interface ArtDisplayProps {
   art: ArtData;
 }
 
-const ArtDisplay: React.FC<ArtDisplayProps> = ({ art }) => {
+const ArtShowcase: React.FC<ArtDisplayProps> = ({ art }) => {
   const { id } = art;
   const isEven = Number(id) % 2 === 0;
 
@@ -45,7 +45,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({ art }) => {
   // Fallback to legacy fields:
   if (art.videoUrl) {
     return (
-      <video controls className="w-full h-auto rounded">
+      <video controls className="w-full h-auto rounded-sm">
         <source src={art.videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -56,7 +56,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({ art }) => {
       <img
         src={art.imageUrl}
         alt={art.title}
-        className="w-full h-auto object-cover rounded"
+        className="w-full h-auto object-cover rounded-sm"
       />
     );
   }
@@ -88,9 +88,9 @@ const MediaSlider: React.FC<MediaSliderProps> = ({ items }) => {
 
   return (
     <div className="relative">
-      <div className="w-full h-auto rounded">
+      <div className="w-full h-auto rounded-sm">
         {currentItem.type === "video" ? (
-          <video controls className="w-full h-auto rounded">
+          <video controls className="w-full h-auto rounded-sm">
             <source src={currentItem.url} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -103,7 +103,7 @@ const MediaSlider: React.FC<MediaSliderProps> = ({ items }) => {
           <img
             src={currentItem.url}
             alt={currentItem.alt || "Art image"}
-            className="w-full h-auto object-cover rounded"
+            className="w-full h-auto object-cover rounded-sm"
           />
         )}
       </div>
@@ -111,13 +111,13 @@ const MediaSlider: React.FC<MediaSliderProps> = ({ items }) => {
         <>
           <button
             onClick={prevSlide}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-r hover:bg-gray-700"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 rounded-r"
           >
             Prev
           </button>
           <button
             onClick={nextSlide}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-l hover:bg-gray-700"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 rounded-l"
           >
             Next
           </button>
@@ -136,21 +136,21 @@ const DetailsDisplay: React.FC<DetailsDisplayProps> = ({ art }) => {
   return (
     <div className="space-y-4">
       <h1 className="text-3xl font-bold">{title}</h1>
-      {subtitle && <p className="text-xl text-gray-600">{subtitle}</p>}
+      {subtitle && <p className="text-xl">{subtitle}</p>}
       <p className="text-base">{description}</p>
-      {extraInfo && <p className="text-sm text-gray-500">{extraInfo}</p>}
+      {extraInfo && <p className="text-sm">{extraInfo}</p>}
       {externalLink && (
         <a
           href={externalLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
+          className="hover:underline"
         >
           Listen to the full track on Spotify
         </a>
       )}
       {saleInfo && saleInfo.isForSale && (
-        <div className="mt-4 p-4 border rounded bg-gray-50">
+        <div className="mt-4 p-4 border rounded-sm">
           <p className="font-semibold">
             For Sale: {saleInfo.currency} {saleInfo.price}
           </p>
@@ -159,7 +159,7 @@ const DetailsDisplay: React.FC<DetailsDisplayProps> = ({ art }) => {
               href={saleInfo.purchaseLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="hover:underline"
             >
               Purchase Now
             </a>
@@ -170,4 +170,4 @@ const DetailsDisplay: React.FC<DetailsDisplayProps> = ({ art }) => {
   );
 };
 
-export default ArtDisplay;
+export default ArtShowcase;
