@@ -22,7 +22,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
     <section className="my-8">
       <div className="flex flex-col lg:flex-row">
         {/* Header Section */}
-        <div className="mb-4 lg:mb-0 lg:mr-6 lg:w-1/4 flex items-start">
+        <div className="mb-4 lg:mb-0 lg:mr-6 lg:w-1/6 flex items-start">
           <Link
             to={`/${collection}`}
             className="group inline-flex items-baseline text-3xl font-bold"
