@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { artCollection } from "../../data/library";
 import ArtHeader from "../../components/ArtHeader";
 import ArtShowcase from "../../components/ArtShowcase";
-import NotFound from "../../components/NotFound";
+import NotFound from "../../utils/NotFound";
 
 const ArtPage: React.FC = () => {
     useEffect(() => {
