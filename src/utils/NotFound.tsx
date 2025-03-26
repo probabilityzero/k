@@ -37,7 +37,7 @@ const NotFound: React.FC = () => {
           <div className="mb-4">
             <img
               src={randomMedia}
-              className="w-full max-w-xl aspect-video rounded-sm"
+              className="w-full max-w-xl min-h-48 md:min-h-72 aspect-video rounded-sm"
             />
           </div>
         )}
