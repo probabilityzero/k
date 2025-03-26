@@ -55,30 +55,12 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
             >
               {/* Square container */}
               <div className="w-full aspect-square overflow-hidden">
-                {art.mediaItems && art.mediaItems.length > 0 ? (
-                  art.mediaItems[0].type === "video" ? (
-                    <video className="w-full h-full object-cover" muted>
-                      <source src={art.mediaItems[0].url} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <img
-                      src={art.mediaItems[0].url}
-                      alt={art.mediaItems[0].alt || art.title}
-                      className="w-full h-full object-cover"
-                    />
-                  )
-                ) : art.imageUrl ? (
+                {art.imageUrl ? (
                   <img
                     src={art.imageUrl}
                     alt={art.title}
                     className="w-full h-full object-cover"
                   />
-                ) : art.videoUrl ? (
-                  <video className="w-full h-full object-cover" muted>
-                    <source src={art.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
                 ) : (
                   <div className="w-full h-full bg-gray-200 flex items-center justify-center">
                     <span className="text-red-500">No Media</span>
@@ -86,11 +68,11 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
                 )}
               </div>
               <div className="p-1">
-                <h3 className="text-lg font-medium hover:underline">{art.title}</h3>
+                <h3 className="text-lg font-medium hover:underline">
+                  {art.title}
+                </h3>
                 {art.subtitle && (
-                  <p className="text-xs text-secondary">
-                    {art.subtitle}
-                  </p>
+                  <p className="text-xs text-secondary">{art.subtitle}</p>
                 )}
               </div>
             </Link>

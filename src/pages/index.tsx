@@ -131,16 +131,16 @@ const Home: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col p-4">
+    <div className="flex flex-col pt-8">
       {/* Header / Logo */}
       <header className="flex justify-center items-center">
-        <div className="text-2xl font-bold">
+        <div className="text-3xl font-semibold">
           K
         </div>
       </header>
 
       {/* Main content with extra bottom padding */}
-      <main className="flex py-6 lg:py-16 relative">
+      <main className="flex pt-6 lg:py-12 relative">
         <div className="max-w-7xl mx-auto">
           {/* Upper row items */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8 pb-6 lg:pb-8">
