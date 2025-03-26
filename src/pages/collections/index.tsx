@@ -51,7 +51,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
             <Link
               key={art.id}
               to={`/No.${art.id}`}
-              className="block border-opacity-50 rounded overflow-hidden hover:shadow-md transition-shadow"
+              className="block border-opacity-50 rounded-sm overflow-hidden"
             >
               {/* Square container */}
               <div className="w-full aspect-square overflow-hidden">

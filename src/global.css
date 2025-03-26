@@ -16,9 +16,38 @@
 }
 
 [data-theme='gray'] {
-  --bg: #434044;   
-  --text: #abb0b8; 
+  --bg: #363636;   
+  --text: #bd9cb8; 
 }
+
+/* [data-theme='gray'] {
+  --bg: #2B2D42;   
+  --text: #F8F9FA; 
+} */
+
+/* Peach Theme */
+/* [data-theme='gray'] {
+  --bg: #4B5563; 
+  --text: #FDE8DF;
+} */
+
+/* [data-theme='gray'] {
+  --bg: #FDE8DF; 
+  --text: #4B5563; 
+} */
+
+/* Lavender Theme */
+/* [data-theme='gray'] {
+  --bg: #574F59; 
+  --text: #F5E6FF;
+} */
+
+/* bllue */
+/* [data-theme='gray'] {
+  --bg: #2C3E50; 
+  --text: #F5E6FF; 
+}  */
+
 
 body {
   background-color: var(--bg);
