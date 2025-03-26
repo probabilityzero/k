@@ -47,7 +47,7 @@ const NotFound: React.FC = () => {
         <p className="text-lg m-2">
           The art piece you seek has eluded the collection. Whether lost in history or in plain sight, it remains a mystery.
         </p>
-        <p className="text-md mb-4" style={{ opacity: 0.7 }}>
+        <p className="text-md mt-2 mb-6" style={{ opacity: 0.7 }}>
         Please check the URL, or explore the <a href="/collections" className="hover:underline">collections</a>.
         </p>
         <Link
