@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../../components/Banner";
-import { ArtData, artCollection } from "../../data/library"; // Corrected import path
+import { ArtData, artCollection, collections } from "../../data/library"; // Corrected import path
 
 const Miscellaneous: React.FC = () => {
   useEffect(() => {
     const section = document.getElementById("target-section");
     if (section) {
-      section.scrollIntoView(); 
+      section.scrollIntoView();
     } else {
-      window.scrollTo(0, 0); 
+      window.scrollTo(0, 0);
     }
   }, []);
 
@@ -17,12 +17,19 @@ const Miscellaneous: React.FC = () => {
     (item: ArtData) => item.collection === "miscellaneous"
   );
 
+  // Retrieve metadata from the centralized collections data
+  const meta = collections["miscellaneous"] || {
+    title: "Miscellaneous",
+    subtitle: "",
+    bgImageUrl: "",
+  };
+
   return (
     <div className="min-h-screen">
       <Banner
-        title="Miscellaneous"
-        subtitle="Mechanical wonders and futuristic technology"
-        bgImageUrl="https://i.pinimg.com/originals/22/15/76/2215767a1cbd1c2c8bec3241f199b02a.gif"
+        title={meta.title}
+        subtitle={meta.subtitle}
+        bgImageUrl={meta.bgImageUrl}
       />
 
       <div className="max-w-7xl mx-auto px-4 py-8">
@@ -38,10 +45,7 @@ const Miscellaneous: React.FC = () => {
                 {data.mediaItems && data.mediaItems.length > 0 ? (
                   data.mediaItems[0].type === "video" ? (
                     <video className="w-full h-full object-cover" muted>
-                      <source
-                        src={data.mediaItems[0].url}
-                        type="video/mp4"
-                      />
+                      <source src={data.mediaItems[0].url} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   ) : (
