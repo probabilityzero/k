@@ -22,7 +22,7 @@ export const cardItemsData: CardsData[] = [
   {
     to: "/collections/machines",
     imgSrc:
-      "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
+      "https://ipfs.io/ipfs/QmehS5B3bhhYogej5BUkcSYeUT78MmTGkNNwYgR3jJ6Gc7",
     alt: "Machines",
     label: "machines",
   },
@@ -36,14 +36,14 @@ export const cardItemsData: CardsData[] = [
   {
     to: "/collections/audiovisual",
     imgSrc:
-      "https://ipfs.io/ipfs/QmehS5B3bhhYogej5BUkcSYeUT78MmTGkNNwYgR3jJ6Gc7",
+      "https://res.cloudinary.com/nifty-gateway/image/upload/v1684745617/publishers/ina-vare/67816/91345/Kerim%20Safa%20-%20Irregular%20Liquid%20-%20Kerim%20Safa.gif",
     alt: "Audiovisual",
     label: "audiovisual",
   },
   {
     to: "/miscellaneous",
     imgSrc:
-      "https://res.cloudinary.com/nifty-gateway/image/upload/v1684745617/publishers/ina-vare/67816/91345/Kerim%20Safa%20-%20Irregular%20Liquid%20-%20Kerim%20Safa.gif",
+      "https://media.giphy.com/media/3oEduEwPB9JKgxOsJG/giphy.gif",
     alt: "Miscellaneous",
     label: "miscellaneous",
   },
@@ -133,15 +133,15 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
       {/* Header / Logo */}
-      <header className="flex justify-center items-center py-8">
+      <header className="flex justify-center items-center p-6">
         <div className="text-4xl font-bold">
           K
         </div>
       </header>
 
       {/* Main content with extra bottom padding */}
-      <main className="flex py-10 relative">
-        <div className="max-w-7xl mx-auto px-4">
+      <main className="flex py-2 lg:py-10 relative">
+        <div className="max-w-7xl mx-auto">
           {/* Upper row items */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8 pb-6 lg:pb-8">
             {upperRowItems.map((item, index) =>

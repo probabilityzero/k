@@ -34,6 +34,8 @@ export interface ArtData {
   saleInfo?: SaleInfo;
 }
 
+const placeholderImgUrl = "https://raw.githubusercontent.com/probabilityzero/cloudstorage/main/placeholder.png";
+
 export const artCollection: ArtData[] = [
   {
     id: "001",
@@ -41,7 +43,7 @@ export const artCollection: ArtData[] = [
     title: "Mechanical Vision",
     subtitle: "Digital Sculpture, 2025",
     description: "A sleek representation of mechanical precision.",
-    imageUrl: "https://placehold.co/600x400?text=Mechanical+Vision",
+    imageUrl: placeholderImgUrl,
     extraInfo: "Exhibited at Tech Expo 2025",
     saleInfo: {
       isForSale: true,
@@ -59,7 +61,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Geometric+Flow",
+        url: placeholderImgUrl,
         alt: "Geometric Flow artwork"
       }
     ],
@@ -85,7 +87,7 @@ export const artCollection: ArtData[] = [
     title: "Abstract Echo",
     subtitle: "Misc, 2022",
     description: "A mysterious interplay of abstract forms and echoes.",
-    imageUrl: "https://placehold.co/600x400?text=Abstract+Echo",
+    imageUrl: placeholderImgUrl,
     extraInfo: "Limited edition print available"
   },
   {
@@ -101,7 +103,7 @@ export const artCollection: ArtData[] = [
       },
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Cyber+Core+Detail",
+        url: placeholderImgUrl,
         alt: "Cyber Core detail"
       }
     ],
@@ -118,7 +120,7 @@ export const artCollection: ArtData[] = [
     title: "Mosaic Matrix",
     subtitle: "Pattern, 2024",
     description: "An intricate mosaic that layers modern design.",
-    imageUrl: "https://placehold.co/600x400?text=Mosaic+Matrix",
+    imageUrl: placeholderImgUrl,
     saleInfo: {
       isForSale: true,
       price: 650,
@@ -149,7 +151,7 @@ export const artCollection: ArtData[] = [
     title: "Surreal Whimsy",
     subtitle: "Misc, 2022",
     description: "A whimsical journey into the surreal.",
-    imageUrl: "https://placehold.co/600x400?text=Surreal+Whimsy"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "009",
@@ -160,7 +162,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Digital+Dynamo",
+        url: placeholderImgUrl,
         alt: "Digital Dynamo artwork"
       },
       {
@@ -181,7 +183,7 @@ export const artCollection: ArtData[] = [
     title: "Spiral Symphony",
     subtitle: "Pattern, 2024",
     description: "A symphony of spirals and vibrant color.",
-    imageUrl: "https://placehold.co/600x400?text=Spiral+Symphony"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "011",
@@ -198,7 +200,7 @@ export const artCollection: ArtData[] = [
     title: "Ephemeral Moods",
     subtitle: "Misc, 2022",
     description: "Capturing transient moods through abstract imagery.",
-    imageUrl: "https://placehold.co/600x400?text=Ephemeral+Moods"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "013",
@@ -206,7 +208,7 @@ export const artCollection: ArtData[] = [
     title: "Robotic Reverie",
     subtitle: "Digital Art, 2025",
     description: "A reverie of robotic forms and futuristic design.",
-    imageUrl: "https://placehold.co/600x400?text=Robotic+Reverie",
+    imageUrl: placeholderImgUrl,
     saleInfo: {
       isForSale: true,
       price: 2800,
@@ -223,12 +225,12 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Fractal+Finesse",
+        url: placeholderImgUrl,
         alt: "Fractal Finesse artwork"
       },
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Detail+Fractal+Finesse",
+        url: placeholderImgUrl,
         alt: "Fractal detail"
       }
     ],
@@ -254,7 +256,7 @@ export const artCollection: ArtData[] = [
     title: "Mystic Mirage",
     subtitle: "Misc, 2022",
     description: "An illusionary glimpse into a mystic world.",
-    imageUrl: "https://placehold.co/600x400?text=Mystic+Mirage"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "017",
@@ -265,7 +267,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Quantum+Circuit",
+        url: placeholderImgUrl,
         alt: "Quantum Circuit artwork"
       }
     ],
@@ -282,7 +284,7 @@ export const artCollection: ArtData[] = [
     title: "Lattice Lines",
     subtitle: "Pattern, 2024",
     description: "Intersecting lines form a modern visual lattice.",
-    imageUrl: "https://placehold.co/600x400?text=Lattice+Lines"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "019",
@@ -307,7 +309,7 @@ export const artCollection: ArtData[] = [
     title: "Timeless Drift",
     subtitle: "Misc, 2022",
     description: "An artistic exploration of time and movement.",
-    imageUrl: "https://placehold.co/600x400?text=Timeless+Drift",
+    imageUrl: placeholderImgUrl,
     extraInfo: "Available as a digital download"
   },
   {
@@ -316,7 +318,7 @@ export const artCollection: ArtData[] = [
     title: "Data Forge",
     subtitle: "Digital Sculpture, 2025",
     description: "Forging data into a tangible digital masterpiece.",
-    imageUrl: "https://placehold.co/600x400?text=Data+Forge",
+    imageUrl: placeholderImgUrl,
     saleInfo: {
       isForSale: true,
       price: 2900,
@@ -333,7 +335,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Chromatic+Web",
+        url: placeholderImgUrl,
         alt: "Chromatic Web artwork"
       }
     ]
@@ -353,7 +355,7 @@ export const artCollection: ArtData[] = [
     title: "Ephemeral Trace",
     subtitle: "Misc, 2022",
     description: "A fleeting trace of artistic memory captured in time.",
-    imageUrl: "https://placehold.co/600x400?text=Ephemeral+Trace"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "025",
@@ -368,7 +370,7 @@ export const artCollection: ArtData[] = [
       },
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Neon+Flux+Detail",
+        url: placeholderImgUrl,
         alt: "Neon Flux detail"
       }
     ],
@@ -385,7 +387,7 @@ export const artCollection: ArtData[] = [
     title: "Tessellated Dream",
     subtitle: "Pattern, 2024",
     description: "A dreamlike tessellation of repeating shapes.",
-    imageUrl: "https://placehold.co/600x400?text=Tessellated+Dream"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "027",
@@ -410,7 +412,7 @@ export const artCollection: ArtData[] = [
     title: "Whispering Mirage",
     subtitle: "Misc, 2022",
     description: "A quiet, reflective piece with dreamlike imagery.",
-    imageUrl: "https://placehold.co/600x400?text=Whispering+Mirage"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "029",
@@ -418,7 +420,7 @@ export const artCollection: ArtData[] = [
     title: "Binary Bloom",
     subtitle: "Digital Art, 2025",
     description: "The digital blossom of binary code and organic design.",
-    imageUrl: "https://placehold.co/600x400?text=Binary+Bloom",
+    imageUrl: placeholderImgUrl,
     saleInfo: {
       isForSale: true,
       price: 3300,
@@ -435,7 +437,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Kaleido+Rhythm",
+        url: placeholderImgUrl,
         alt: "Kaleido Rhythm artwork"
       }
     ]
@@ -455,7 +457,7 @@ export const artCollection: ArtData[] = [
     title: "Serene Reflections",
     subtitle: "Misc, 2022",
     description: "Calm and serene visuals that reflect inner peace.",
-    imageUrl: "https://placehold.co/600x400?text=Serene+Reflections"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "033",
@@ -466,7 +468,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Optic+Engine",
+        url: placeholderImgUrl,
         alt: "Optic Engine artwork"
       },
       {
@@ -487,7 +489,7 @@ export const artCollection: ArtData[] = [
     title: "Radiant Mosaic",
     subtitle: "Pattern, 2024",
     description: "A radiant mosaic that plays with light and structure.",
-    imageUrl: "https://placehold.co/600x400?text=Radiant+Mosaic"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "035",
@@ -504,7 +506,7 @@ export const artCollection: ArtData[] = [
     title: "Transient Visions",
     subtitle: "Misc, 2022",
     description: "A fleeting vision of modern abstract expression.",
-    imageUrl: "https://placehold.co/600x400?text=Transient+Visions"
+    imageUrl: placeholderImgUrl
   },
   {
     id: "037",
@@ -512,7 +514,7 @@ export const artCollection: ArtData[] = [
     title: "Circuit Cascade",
     subtitle: "Digital Art, 2025",
     description: "A cascade of circuit elements flowing in digital rhythm.",
-    imageUrl: "https://placehold.co/600x400?text=Circuit+Cascade",
+    imageUrl: placeholderImgUrl,
     saleInfo: {
       isForSale: true,
       price: 3600,
@@ -529,7 +531,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: "https://placehold.co/600x400?text=Prismatic+Layers",
+        url: placeholderImgUrl,
         alt: "Prismatic Layers artwork"
       }
     ]
@@ -557,7 +559,7 @@ export const artCollection: ArtData[] = [
     title: "Kaleidoscopic Dreams",
     subtitle: "Misc, 2022",
     description: "Ever-changing dreams rendered in kaleidoscopic form.",
-    imageUrl: "https://placehold.co/600x400?text=Kaleidoscopic+Dreams",
+    imageUrl: placeholderImgUrl,
     saleInfo: {
       isForSale: true,
       price: 900,
