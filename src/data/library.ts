@@ -34,8 +34,40 @@ export interface ArtData {
   // Sales / e-commerce information
   saleInfo?: SaleInfo;
 }
+export interface CollectionData {
+  title: string;
+  subtitle: string;
+  bgImageUrl: string;
+}
 
 const placeholderImg = "https://raw.githubusercontent.com/probabilityzero/cloudstorage/main/placeholder.png";
+
+export const collections: Record<string, CollectionData> = {
+  machines: {
+    title: "Machines",
+    subtitle: "Mechanical wonders and futuristic technology",
+    bgImageUrl:
+      "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
+  },
+  patterns: {
+    title: "Patterns",
+    subtitle: "Exploring recurring designs and textures",
+    bgImageUrl:
+      "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
+  },
+  audiovisual: {
+    title: "Audiovisual",
+    subtitle: "Mechanical wonders and futuristic technology",
+    bgImageUrl:
+      "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
+  },
+  miscellaneous: {
+    title: "Miscellaneous",
+    subtitle: "A mix of art and innovation",
+    bgImageUrl:
+      "https://i.pinimg.com/originals/22/15/76/2215767a1cbd1c2c8bec3241f199b02a.gif",
+  },
+};
 
 export const artCollection: ArtData[] = [
   {

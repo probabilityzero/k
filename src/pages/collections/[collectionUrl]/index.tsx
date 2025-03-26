@@ -3,31 +3,7 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Banner from "../../../components/Banner";
-import { ArtData, artCollection } from "../../../data/library";
-
-// Define metadata for known collections.
-const collectionMeta: Record<string, { title: string; subtitle: string; bgImageUrl: string }> = {
-  machines: {
-    title: "Machines",
-    subtitle: "Mechanical wonders and futuristic technology",
-    bgImageUrl: "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
-  },
-  patterns: {
-    title: "Patterns",
-    subtitle: "Exploring recurring designs and textures",
-    bgImageUrl: "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
-  },
-  audiovisual: {
-    title: "Audiovisual",
-    subtitle: "Mechanical wonders and futuristic technology",
-    bgImageUrl: "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
-  },
-  miscellaneous: {
-    title: "Miscellaneous",
-    subtitle: "A mix of art and innovation",
-    bgImageUrl: "https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif",
-  },
-};
+import { ArtData, artCollection, collections } from "../../../data/library";
 
 const CollectionPage: React.FC = () => {
   // Get the collectionUrl parameter from the URL
@@ -53,8 +29,8 @@ const CollectionPage: React.FC = () => {
     (item) => item.collection === collectionUrl
   );
 
-  // Retrieve metadata for this collection or provide a default.
-  const meta = collectionMeta[collectionUrl] || {
+  // Retrieve metadata for this collection from the data file.
+  const meta = collections[collectionUrl] || {
     title: collectionUrl,
     subtitle: "",
     bgImageUrl: "",
@@ -89,7 +65,7 @@ const CollectionPage: React.FC = () => {
                     />
                   ) : (
                     <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                      <span className="text-red-500">No Media</span>
+                      <span className=""></span>
                     </div>
                   )}
                 </div>

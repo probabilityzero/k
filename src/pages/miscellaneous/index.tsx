@@ -22,7 +22,7 @@ const Miscellaneous: React.FC = () => {
       <Banner
         title="Miscellaneous"
         subtitle="Mechanical wonders and futuristic technology"
-        bgImageUrl="https://ipfs.pixura.io/ipfs/QmWRHCWqguPMvobUQ6FiC19V6U46M8yDkGQjCC5JSdS51n/EncryptionFacility.gif"
+        bgImageUrl="https://i.pinimg.com/originals/22/15/76/2215767a1cbd1c2c8bec3241f199b02a.gif"
       />
 
       <div className="max-w-7xl mx-auto px-4 py-8">

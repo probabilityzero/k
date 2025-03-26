@@ -19,7 +19,14 @@ const NotFound: React.FC = () => {
     "https://media.giphy.com/media/aGeePr7nv6ra8/giphy.gif",
     "https://i.pinimg.com/originals/cd/9a/cb/cd9acb44872869bd9110cadc8f68b9da.gif",
     "https://68.media.tumblr.com/33e1ac9451cb50a5705ac03aa977d879/tumblr_oobcp0hw9T1v8tshbo1_540.gif",
-    "https://64.media.tumblr.com/a97aadb40f9122496b87446af7faf088/559203c192687d3b-06/s2048x3072_c0,3425,100000,96233/5f9d39de76f7c5cbac7fea5d412d62b814346413.gif"
+    "https://64.media.tumblr.com/a97aadb40f9122496b87446af7faf088/559203c192687d3b-06/s2048x3072_c0,3425,100000,96233/5f9d39de76f7c5cbac7fea5d412d62b814346413.gif",
+    "https://99px.ru/sstorage/86/2016/11/image_860911161208066189509.gif",
+    "https://i.pinimg.com/originals/da/d2/e7/dad2e74d5e892a72b840635ca29b228f.gif",
+    "https://media.giphy.com/media/kryv0022zw7eg/giphy.gif",
+    "https://media.giphy.com/media/H2oKS82z0ClnG/giphy.gif",
+    "https://media.giphy.com/media/3oEduEwPB9JKgxOsJG/giphy.gif",
+    "https://www.icegif.com/wp-content/uploads/2022/07/icegif-1404.gif",
+    ""
   ];
   
   // Choose one at random
