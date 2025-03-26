@@ -55,9 +55,9 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
             >
               {/* Square container */}
               <div className="w-full aspect-square overflow-hidden">
-                {art.imageUrl ? (
+                {art.thumbUrl ? (
                   <img
-                    src={art.imageUrl}
+                    src={art.thumbUrl}
                     alt={art.title}
                     className="w-full h-full object-cover"
                   />
@@ -83,7 +83,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
   );
 };
 
-const Collections: React.FC = () => {
+const AllCollections: React.FC = () => {
   useEffect(() => {
     const section = document.getElementById("target-section");
     if (section) {
@@ -128,4 +128,4 @@ const Collections: React.FC = () => {
   );
 };
 
-export default Collections;
+export default AllCollections;

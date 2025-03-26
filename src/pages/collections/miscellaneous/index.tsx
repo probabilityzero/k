@@ -1,9 +1,7 @@
-// src/pages/collections/misc.tsx
-
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../../../components/Banner";
-import { ArtData, artCollection } from "../../../data/library";
+import { ArtData, artCollection } from "../../../data/library"; // Corrected import path
 
 const Miscellaneous: React.FC = () => {
   useEffect(() => {
@@ -16,7 +14,7 @@ const Miscellaneous: React.FC = () => {
   }, []);
 
   const miscData: ArtData[] = artCollection.filter(
-    (item) => item.collection === "miscellaneous"
+    (item: ArtData) => item.collection === "miscellaneous"
   );
 
   return (
@@ -53,9 +51,9 @@ const Miscellaneous: React.FC = () => {
                       className="w-full h-full object-cover"
                     />
                   )
-                ) : data.imageUrl ? (
+                ) : data.thumbUrl ? (
                   <img
-                    src={data.imageUrl}
+                    src={data.thumbUrl}
                     alt={data.title}
                     className="w-full h-full object-cover"
                   />

@@ -5,7 +5,8 @@ export type MediaType = "image" | "video" | "audio";
 export interface MediaItem {
   type: MediaType;
   url: string;
-  alt?: string; // for images
+  alt?: string; 
+  caption?: string;
 }
 
 export interface SaleInfo {
@@ -21,12 +22,12 @@ export interface ArtData {
   title: string;
   subtitle?: string; // e.g. "Animation, 2025"
   description: string;
-  imageUrl?: string;
-  // Media: either a single media item or multiple (slider/gallery)
-  mediaItems?: MediaItem[]; // if provided, used for slider
   // Legacy fields – used if mediaItems is not provided
   videoUrl?: string;
   audioUrl?: string;
+  thumbUrl?: string;
+  // Media: either a single media item or multiple (slider/gallery)
+  mediaItems?: MediaItem[]; // if provided, used for slider
   // Additional details
   extraInfo?: string; // e.g. "Released on Mesh, 2025"
   externalLink?: string; // e.g. Spotify link
@@ -34,7 +35,7 @@ export interface ArtData {
   saleInfo?: SaleInfo;
 }
 
-const placeholderImageUrl = "https://raw.githubusercontent.com/probabilityzero/cloudstorage/main/placeholder.png";
+const placeholderImg = "https://raw.githubusercontent.com/probabilityzero/cloudstorage/main/placeholder.png";
 
 export const artCollection: ArtData[] = [
   {
@@ -43,8 +44,8 @@ export const artCollection: ArtData[] = [
     title: "Mechanical Vision",
     subtitle: "Digital Sculpture, 2025",
     description: "A sleek representation of mechanical precision.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     extraInfo: "Exhibited at Tech Expo 2025",
     saleInfo: {
       isForSale: true,
@@ -59,11 +60,11 @@ export const artCollection: ArtData[] = [
     title: "Geometric Flow",
     subtitle: "Pattern, 2024",
     description: "Flowing geometric shapes in a minimalist style.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Geometric Flow artwork"
       }
     ],
@@ -80,8 +81,8 @@ export const artCollection: ArtData[] = [
     title: "Sonic Light",
     subtitle: "Audiovisual, 2023",
     description: "A blend of vibrant visuals and captivating sound.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     videoUrl: "https://placehold.co/600x400?text=Video+Sonic+Light",
     externalLink: "https://placeholder.com/sonic-light",
   },
@@ -91,8 +92,8 @@ export const artCollection: ArtData[] = [
     title: "Abstract Echo",
     subtitle: "Misc, 2022",
     description: "A mysterious interplay of abstract forms and echoes.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     extraInfo: "Limited edition print available"
   },
   {
@@ -101,7 +102,7 @@ export const artCollection: ArtData[] = [
     title: "Cyber Core",
     subtitle: "Digital Art, 2025",
     description: "A futuristic glimpse into cybernetic systems.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "video",
@@ -109,7 +110,7 @@ export const artCollection: ArtData[] = [
       },
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Cyber Core detail"
       }
     ],
@@ -126,8 +127,8 @@ export const artCollection: ArtData[] = [
     title: "Mosaic Matrix",
     subtitle: "Pattern, 2024",
     description: "An intricate mosaic that layers modern design.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     saleInfo: {
       isForSale: true,
       price: 650,
@@ -141,7 +142,7 @@ export const artCollection: ArtData[] = [
     title: "Rhythmic Pulse",
     subtitle: "Audiovisual, 2023",
     description: "Pulsating visuals synchronized with rhythmic audio.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "audio",
@@ -153,7 +154,7 @@ export const artCollection: ArtData[] = [
       },
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Rhythmic Pulse detail"
       }
     ],
@@ -164,8 +165,8 @@ export const artCollection: ArtData[] = [
     title: "Surreal Whimsy",
     subtitle: "Misc, 2022",
     description: "A whimsical journey into the surreal.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "009",
@@ -173,11 +174,11 @@ export const artCollection: ArtData[] = [
     title: "Digital Dynamo",
     subtitle: "Digital Sculpture, 2025",
     description: "Dynamic forms and digital energy encapsulated in art.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Digital Dynamo artwork"
       },
       {
@@ -198,8 +199,8 @@ export const artCollection: ArtData[] = [
     title: "Spiral Symphony",
     subtitle: "Pattern, 2024",
     description: "A symphony of spirals and vibrant color.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "011",
@@ -207,8 +208,8 @@ export const artCollection: ArtData[] = [
     title: "Echoing Beats",
     subtitle: "Audiovisual, 2023",
     description: "An audiovisual journey through sound and motion.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     videoUrl: "https://placehold.co/600x400?text=Video+Echoing+Beats",
     externalLink: "https://placeholder.com/echoing-beats",
   },
@@ -218,8 +219,8 @@ export const artCollection: ArtData[] = [
     title: "Ephemeral Moods",
     subtitle: "Misc, 2022",
     description: "Capturing transient moods through abstract imagery.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "013",
@@ -227,8 +228,8 @@ export const artCollection: ArtData[] = [
     title: "Robotic Reverie",
     subtitle: "Digital Art, 2025",
     description: "A reverie of robotic forms and futuristic design.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     saleInfo: {
       isForSale: true,
       price: 2800,
@@ -242,16 +243,16 @@ export const artCollection: ArtData[] = [
     title: "Fractal Finesse",
     subtitle: "Pattern, 2024",
     description: "Delicate fractal patterns that mesmerize the viewer.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Fractal Finesse artwork"
       },
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Fractal detail"
       }
     ],
@@ -268,8 +269,8 @@ export const artCollection: ArtData[] = [
     title: "Vivid Resonance",
     subtitle: "Audiovisual, 2023",
     description: "A vibrant fusion of sound and animated color.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     videoUrl: "https://placehold.co/600x400?text=Video+Vivid+Resonance",
     extraInfo: "Featured in Audio Visual Fest",
   },
@@ -279,8 +280,8 @@ export const artCollection: ArtData[] = [
     title: "Mystic Mirage",
     subtitle: "Misc, 2022",
     description: "An illusionary glimpse into a mystic world.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "017",
@@ -288,11 +289,11 @@ export const artCollection: ArtData[] = [
     title: "Quantum Circuit",
     subtitle: "Digital Art, 2025",
     description: "A digital exploration of quantum mechanics and circuitry.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Quantum Circuit artwork"
       }
     ],
@@ -309,8 +310,8 @@ export const artCollection: ArtData[] = [
     title: "Lattice Lines",
     subtitle: "Pattern, 2024",
     description: "Intersecting lines form a modern visual lattice.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "019",
@@ -318,7 +319,7 @@ export const artCollection: ArtData[] = [
     title: "Pulse and Shadow",
     subtitle: "Audiovisual, 2023",
     description: "A dramatic interplay of pulsing lights and shadows.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "video",
@@ -330,7 +331,7 @@ export const artCollection: ArtData[] = [
       },
        {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Pulse and Shadow detail"
       }
     ],
@@ -341,8 +342,8 @@ export const artCollection: ArtData[] = [
     title: "Timeless Drift",
     subtitle: "Misc, 2022",
     description: "An artistic exploration of time and movement.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     extraInfo: "Available as a digital download"
   },
   {
@@ -351,8 +352,8 @@ export const artCollection: ArtData[] = [
     title: "Data Forge",
     subtitle: "Digital Sculpture, 2025",
     description: "Forging data into a tangible digital masterpiece.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     saleInfo: {
       isForSale: true,
       price: 2900,
@@ -366,11 +367,11 @@ export const artCollection: ArtData[] = [
     title: "Chromatic Web",
     subtitle: "Pattern, 2024",
     description: "A web of chromatic threads interwoven into art.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Chromatic Web artwork"
       }
     ]
@@ -381,8 +382,8 @@ export const artCollection: ArtData[] = [
     title: "Synchronized Pulse",
     subtitle: "Audiovisual, 2023",
     description: "Visual pulses synchronized with a steady beat.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     videoUrl: "https://placehold.co/600x400?text=Video+Synchronized+Pulse",
     externalLink: "https://placeholder.com/synchronized-pulse",
   },
@@ -392,8 +393,8 @@ export const artCollection: ArtData[] = [
     title: "Ephemeral Trace",
     subtitle: "Misc, 2022",
     description: "A fleeting trace of artistic memory captured in time.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "025",
@@ -401,7 +402,7 @@ export const artCollection: ArtData[] = [
     title: "Neon Flux",
     subtitle: "Digital Art, 2025",
     description: "A vibrant interplay of neon lights and machine form.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "video",
@@ -409,7 +410,7 @@ export const artCollection: ArtData[] = [
       },
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Neon Flux detail"
       }
     ],
@@ -426,8 +427,8 @@ export const artCollection: ArtData[] = [
     title: "Tessellated Dream",
     subtitle: "Pattern, 2024",
     description: "A dreamlike tessellation of repeating shapes.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "027",
@@ -435,7 +436,7 @@ export const artCollection: ArtData[] = [
     title: "Vibrant Echo",
     subtitle: "Audiovisual, 2023",
     description: "Echoing visuals paired with vibrant soundscapes.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "audio",
@@ -447,7 +448,7 @@ export const artCollection: ArtData[] = [
       },
        {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Vibrant Echo detail"
       }
     ],
@@ -458,8 +459,8 @@ export const artCollection: ArtData[] = [
     title: "Whispering Mirage",
     subtitle: "Misc, 2022",
     description: "A quiet, reflective piece with dreamlike imagery.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "029",
@@ -467,8 +468,8 @@ export const artCollection: ArtData[] = [
     title: "Binary Bloom",
     subtitle: "Digital Art, 2025",
     description: "The digital blossom of binary code and organic design.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     saleInfo: {
       isForSale: true,
       price: 3300,
@@ -482,11 +483,11 @@ export const artCollection: ArtData[] = [
     title: "Kaleido Rhythm",
     subtitle: "Pattern, 2024",
     description: "A rhythmic explosion of kaleidoscopic patterns.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Kaleido Rhythm artwork"
       }
     ]
@@ -497,8 +498,8 @@ export const artCollection: ArtData[] = [
     title: "Celestial Harmony",
     subtitle: "Audiovisual, 2023",
     description: "A cosmic interplay of sound and celestial visuals.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     videoUrl: "https://placehold.co/600x400?text=Video+Celestial+Harmony",
     extraInfo: "Premiered on Cosmic Visions",
   },
@@ -508,8 +509,8 @@ export const artCollection: ArtData[] = [
     title: "Serene Reflections",
     subtitle: "Misc, 2022",
     description: "Calm and serene visuals that reflect inner peace.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "033",
@@ -517,11 +518,11 @@ export const artCollection: ArtData[] = [
     title: "Optic Engine",
     subtitle: "Digital Sculpture, 2025",
     description: "Engineered optical designs fused with mechanical artistry.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Optic Engine artwork"
       },
       {
@@ -542,8 +543,8 @@ export const artCollection: ArtData[] = [
     title: "Radiant Mosaic",
     subtitle: "Pattern, 2024",
     description: "A radiant mosaic that plays with light and structure.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "035",
@@ -551,8 +552,8 @@ export const artCollection: ArtData[] = [
     title: "Dynamic Spectrum",
     subtitle: "Audiovisual, 2023",
     description: "Shifting colors and dynamic sound create an immersive experience.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     videoUrl: "https://placehold.co/600x400?text=Video+Dynamic+Spectrum",
     externalLink: "https://placeholder.com/dynamic-spectrum",
   },
@@ -562,8 +563,8 @@ export const artCollection: ArtData[] = [
     title: "Transient Visions",
     subtitle: "Misc, 2022",
     description: "A fleeting vision of modern abstract expression.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
   },
   {
     id: "037",
@@ -571,8 +572,8 @@ export const artCollection: ArtData[] = [
     title: "Circuit Cascade",
     subtitle: "Digital Art, 2025",
     description: "A cascade of circuit elements flowing in digital rhythm.",
-    imageUrl: placeholderImageUrl,
-    mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+    mediaItems: [{ type: "image", url: placeholderImg }],
     saleInfo: {
       isForSale: true,
       price: 3600,
@@ -586,11 +587,11 @@ export const artCollection: ArtData[] = [
     title: "Prismatic Layers",
     subtitle: "Pattern, 2024",
     description: "Layers of prismatic hues forming a vibrant pattern.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Prismatic Layers artwork"
       }
     ]
@@ -601,7 +602,7 @@ export const artCollection: ArtData[] = [
     title: "Sonic Mirage",
     subtitle: "Audiovisual, 2023",
     description: "An interplay of sound and light creating a mirage-like effect.",
-    imageUrl: placeholderImageUrl,
+    thumbUrl: placeholderImg,
     mediaItems: [
       {
         type: "video",
@@ -613,7 +614,7 @@ export const artCollection: ArtData[] = [
       },
        {
         type: "image",
-        url: placeholderImageUrl,
+        url: placeholderImg,
         alt: "Sonic Mirage detail"
       }
     ],
@@ -624,8 +625,8 @@ export const artCollection: ArtData[] = [
     title: "Kaleidoscopic Dreams",
     subtitle: "Misc, 2022",
     description: "Ever-changing dreams rendered in kaleidoscopic form.",
-    imageUrl: placeholderImageUrl,
-     mediaItems: [{ type: "image", url: placeholderImageUrl }],
+    thumbUrl: placeholderImg,
+     mediaItems: [{ type: "image", url: placeholderImg }],
     saleInfo: {
       isForSale: true,
       price: 900,
