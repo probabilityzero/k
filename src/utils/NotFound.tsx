@@ -47,12 +47,12 @@ const NotFound: React.FC = () => {
         <p className="text-lg m-2">
           The art piece you seek has eluded the collection. Whether lost in history or in plain sight, it remains a mystery.
         </p>
-        <p className="text-md m-6" style={{ opacity: 0.7 }}>
-        Please check the URL, or <a href="/collection" className="hover:underline">explore the collection</a>.
+        <p className="text-md mb-4" style={{ opacity: 0.7 }}>
+        Please check the URL, or explore the <a href="/collections" className="hover:underline">collections</a>.
         </p>
         <Link
           to="/"
-          className="inline-block px-6 py-3 border transition-transform duration-300 rounded-sm transform hover:-translate-y-1"
+          className="inline-block px-6 py-3 border transition-transform duration-200 rounded-sm transform hover:-translate-y-0.5"
         >
           Return to Gallery
         </Link>
