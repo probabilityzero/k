@@ -34,7 +34,7 @@ export interface ArtData {
   saleInfo?: SaleInfo;
 }
 
-const placeholderImgUrl = "https://raw.githubusercontent.com/probabilityzero/cloudstorage/main/placeholder.png";
+const placeholderImageUrl = "https://raw.githubusercontent.com/probabilityzero/cloudstorage/main/placeholder.png";
 
 export const artCollection: ArtData[] = [
   {
@@ -43,7 +43,7 @@ export const artCollection: ArtData[] = [
     title: "Mechanical Vision",
     subtitle: "Digital Sculpture, 2025",
     description: "A sleek representation of mechanical precision.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     extraInfo: "Exhibited at Tech Expo 2025",
     saleInfo: {
       isForSale: true,
@@ -61,7 +61,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Geometric Flow artwork"
       }
     ],
@@ -79,7 +79,8 @@ export const artCollection: ArtData[] = [
     subtitle: "Audiovisual, 2023",
     description: "A blend of vibrant visuals and captivating sound.",
     videoUrl: "https://placehold.co/600x400?text=Video+Sonic+Light",
-    externalLink: "https://placeholder.com/sonic-light"
+    externalLink: "https://placeholder.com/sonic-light",
+    imageUrl: placeholderImageUrl,
   },
   {
     id: "004",
@@ -87,7 +88,7 @@ export const artCollection: ArtData[] = [
     title: "Abstract Echo",
     subtitle: "Misc, 2022",
     description: "A mysterious interplay of abstract forms and echoes.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     extraInfo: "Limited edition print available"
   },
   {
@@ -103,7 +104,7 @@ export const artCollection: ArtData[] = [
       },
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Cyber Core detail"
       }
     ],
@@ -120,7 +121,7 @@ export const artCollection: ArtData[] = [
     title: "Mosaic Matrix",
     subtitle: "Pattern, 2024",
     description: "An intricate mosaic that layers modern design.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     saleInfo: {
       isForSale: true,
       price: 650,
@@ -143,7 +144,8 @@ export const artCollection: ArtData[] = [
         type: "video",
         url: "https://placehold.co/600x400?text=Video+Rhythmic+Pulse"
       }
-    ]
+    ],
+    imageUrl: placeholderImageUrl,
   },
   {
     id: "008",
@@ -151,7 +153,7 @@ export const artCollection: ArtData[] = [
     title: "Surreal Whimsy",
     subtitle: "Misc, 2022",
     description: "A whimsical journey into the surreal.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "009",
@@ -162,7 +164,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Digital Dynamo artwork"
       },
       {
@@ -183,7 +185,7 @@ export const artCollection: ArtData[] = [
     title: "Spiral Symphony",
     subtitle: "Pattern, 2024",
     description: "A symphony of spirals and vibrant color.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "011",
@@ -192,7 +194,8 @@ export const artCollection: ArtData[] = [
     subtitle: "Audiovisual, 2023",
     description: "An audiovisual journey through sound and motion.",
     videoUrl: "https://placehold.co/600x400?text=Video+Echoing+Beats",
-    externalLink: "https://placeholder.com/echoing-beats"
+    externalLink: "https://placeholder.com/echoing-beats",
+    imageUrl: placeholderImageUrl,
   },
   {
     id: "012",
@@ -200,7 +203,7 @@ export const artCollection: ArtData[] = [
     title: "Ephemeral Moods",
     subtitle: "Misc, 2022",
     description: "Capturing transient moods through abstract imagery.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "013",
@@ -208,7 +211,7 @@ export const artCollection: ArtData[] = [
     title: "Robotic Reverie",
     subtitle: "Digital Art, 2025",
     description: "A reverie of robotic forms and futuristic design.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     saleInfo: {
       isForSale: true,
       price: 2800,
@@ -225,12 +228,12 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Fractal Finesse artwork"
       },
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Fractal detail"
       }
     ],
@@ -248,7 +251,8 @@ export const artCollection: ArtData[] = [
     subtitle: "Audiovisual, 2023",
     description: "A vibrant fusion of sound and animated color.",
     videoUrl: "https://placehold.co/600x400?text=Video+Vivid+Resonance",
-    extraInfo: "Featured in Audio Visual Fest"
+    extraInfo: "Featured in Audio Visual Fest",
+    imageUrl: placeholderImageUrl,
   },
   {
     id: "016",
@@ -256,7 +260,7 @@ export const artCollection: ArtData[] = [
     title: "Mystic Mirage",
     subtitle: "Misc, 2022",
     description: "An illusionary glimpse into a mystic world.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "017",
@@ -267,7 +271,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Quantum Circuit artwork"
       }
     ],
@@ -284,7 +288,7 @@ export const artCollection: ArtData[] = [
     title: "Lattice Lines",
     subtitle: "Pattern, 2024",
     description: "Intersecting lines form a modern visual lattice.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "019",
@@ -301,7 +305,8 @@ export const artCollection: ArtData[] = [
         type: "audio",
         url: "https://example.com/audio-placeholder-019.mp3"
       }
-    ]
+    ],
+     imageUrl: placeholderImageUrl,
   },
   {
     id: "020",
@@ -309,7 +314,7 @@ export const artCollection: ArtData[] = [
     title: "Timeless Drift",
     subtitle: "Misc, 2022",
     description: "An artistic exploration of time and movement.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     extraInfo: "Available as a digital download"
   },
   {
@@ -318,7 +323,7 @@ export const artCollection: ArtData[] = [
     title: "Data Forge",
     subtitle: "Digital Sculpture, 2025",
     description: "Forging data into a tangible digital masterpiece.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     saleInfo: {
       isForSale: true,
       price: 2900,
@@ -335,7 +340,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Chromatic Web artwork"
       }
     ]
@@ -347,7 +352,8 @@ export const artCollection: ArtData[] = [
     subtitle: "Audiovisual, 2023",
     description: "Visual pulses synchronized with a steady beat.",
     videoUrl: "https://placehold.co/600x400?text=Video+Synchronized+Pulse",
-    externalLink: "https://placeholder.com/synchronized-pulse"
+    externalLink: "https://placeholder.com/synchronized-pulse",
+     imageUrl: placeholderImageUrl,
   },
   {
     id: "024",
@@ -355,7 +361,7 @@ export const artCollection: ArtData[] = [
     title: "Ephemeral Trace",
     subtitle: "Misc, 2022",
     description: "A fleeting trace of artistic memory captured in time.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "025",
@@ -370,7 +376,7 @@ export const artCollection: ArtData[] = [
       },
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Neon Flux detail"
       }
     ],
@@ -387,7 +393,7 @@ export const artCollection: ArtData[] = [
     title: "Tessellated Dream",
     subtitle: "Pattern, 2024",
     description: "A dreamlike tessellation of repeating shapes.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "027",
@@ -404,7 +410,8 @@ export const artCollection: ArtData[] = [
         type: "video",
         url: "https://placehold.co/600x400?text=Video+Vibrant+Echo"
       }
-    ]
+    ],
+     imageUrl: placeholderImageUrl,
   },
   {
     id: "028",
@@ -412,7 +419,7 @@ export const artCollection: ArtData[] = [
     title: "Whispering Mirage",
     subtitle: "Misc, 2022",
     description: "A quiet, reflective piece with dreamlike imagery.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "029",
@@ -420,7 +427,7 @@ export const artCollection: ArtData[] = [
     title: "Binary Bloom",
     subtitle: "Digital Art, 2025",
     description: "The digital blossom of binary code and organic design.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     saleInfo: {
       isForSale: true,
       price: 3300,
@@ -437,7 +444,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Kaleido Rhythm artwork"
       }
     ]
@@ -449,7 +456,8 @@ export const artCollection: ArtData[] = [
     subtitle: "Audiovisual, 2023",
     description: "A cosmic interplay of sound and celestial visuals.",
     videoUrl: "https://placehold.co/600x400?text=Video+Celestial+Harmony",
-    extraInfo: "Premiered on Cosmic Visions"
+    extraInfo: "Premiered on Cosmic Visions",
+     imageUrl: placeholderImageUrl,
   },
   {
     id: "032",
@@ -457,7 +465,7 @@ export const artCollection: ArtData[] = [
     title: "Serene Reflections",
     subtitle: "Misc, 2022",
     description: "Calm and serene visuals that reflect inner peace.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "033",
@@ -468,7 +476,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Optic Engine artwork"
       },
       {
@@ -489,7 +497,7 @@ export const artCollection: ArtData[] = [
     title: "Radiant Mosaic",
     subtitle: "Pattern, 2024",
     description: "A radiant mosaic that plays with light and structure.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "035",
@@ -498,7 +506,8 @@ export const artCollection: ArtData[] = [
     subtitle: "Audiovisual, 2023",
     description: "Shifting colors and dynamic sound create an immersive experience.",
     videoUrl: "https://placehold.co/600x400?text=Video+Dynamic+Spectrum",
-    externalLink: "https://placeholder.com/dynamic-spectrum"
+    externalLink: "https://placeholder.com/dynamic-spectrum",
+     imageUrl: placeholderImageUrl,
   },
   {
     id: "036",
@@ -506,7 +515,7 @@ export const artCollection: ArtData[] = [
     title: "Transient Visions",
     subtitle: "Misc, 2022",
     description: "A fleeting vision of modern abstract expression.",
-    imageUrl: placeholderImgUrl
+    imageUrl: placeholderImageUrl
   },
   {
     id: "037",
@@ -514,7 +523,7 @@ export const artCollection: ArtData[] = [
     title: "Circuit Cascade",
     subtitle: "Digital Art, 2025",
     description: "A cascade of circuit elements flowing in digital rhythm.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     saleInfo: {
       isForSale: true,
       price: 3600,
@@ -531,7 +540,7 @@ export const artCollection: ArtData[] = [
     mediaItems: [
       {
         type: "image",
-        url: placeholderImgUrl,
+        url: placeholderImageUrl,
         alt: "Prismatic Layers artwork"
       }
     ]
@@ -551,7 +560,8 @@ export const artCollection: ArtData[] = [
         type: "audio",
         url: "https://example.com/audio-placeholder-039.mp3"
       }
-    ]
+    ],
+     imageUrl: placeholderImageUrl,
   },
   {
     id: "040",
@@ -559,7 +569,7 @@ export const artCollection: ArtData[] = [
     title: "Kaleidoscopic Dreams",
     subtitle: "Misc, 2022",
     description: "Ever-changing dreams rendered in kaleidoscopic form.",
-    imageUrl: placeholderImgUrl,
+    imageUrl: placeholderImageUrl,
     saleInfo: {
       isForSale: true,
       price: 900,
