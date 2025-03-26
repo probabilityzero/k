@@ -41,13 +41,13 @@ const NotFound: React.FC = () => {
             />
           </div>
         )}
-        <h1 className="text-5xl font-extrabold my-4 tracking-tight">
+        <h1 className="text-4xl font-extrabold my-4 tracking-tight">
           Art:// Not Found
         </h1>
-        <p className="text-lg m-2">
+        <p className="text-base m-2">
           The art piece you seek has eluded the collection. Whether lost in history or in plain sight, it remains a mystery.
         </p>
-        <p className="text-md mt-2 mb-6" style={{ opacity: 0.7 }}>
+        <p className="text-sm mt-2 mb-6" style={{ opacity: 0.7 }}>
         Please check the URL, or explore the <a href="/collections" className="hover:underline">collections</a>.
         </p>
         <Link
