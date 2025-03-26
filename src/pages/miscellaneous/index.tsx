@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Banner from "../../../components/Banner";
-import { ArtData, artCollection } from "../../../data/library"; // Corrected import path
+import Banner from "../../components/Banner";
+import { ArtData, artCollection } from "../../data/library"; // Corrected import path
 
 const Miscellaneous: React.FC = () => {
   useEffect(() => {

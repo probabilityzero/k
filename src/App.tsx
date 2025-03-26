@@ -7,7 +7,7 @@ import AllCollections from "./pages/collections"; // Optional home for collectio
 import CollectionPage from "./pages/collections/[collectionUrl]";
 import Exhibitions from "./pages/exhibitions";
 import About from "./pages/about";
-import Miscellaneous from "./pages/collections/miscellaneous";
+import Miscellaneous from "./pages/miscellaneous";
 
 function App() {
   const location = useLocation();
