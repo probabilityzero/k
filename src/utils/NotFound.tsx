@@ -45,10 +45,10 @@ const NotFound: React.FC = () => {
           Art:// Not Found
         </h1>
         <p className="text-lg m-2">
-          The art piece you seek has eluded the collection. Whether it’s lost in the folds of history or hidden in plain sight, it remains a mystery.
+          The art piece you seek has eluded the collection. Whether lost in history or in plain sight, it remains a mystery.
         </p>
-        <p className="text-md m-6" style={{ opacity: 0.6 }}>
-          Please check the URL, or explore our curated galleries to discover other remarkable works.
+        <p className="text-md m-6" style={{ opacity: 0.7 }}>
+        Please check the URL, or <a href="/collection" className="hover:underline">explore the collection</a>.
         </p>
         <Link
           to="/"
