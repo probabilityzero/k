@@ -32,13 +32,12 @@ const NotFound: React.FC = () => {
           I am Nonexistent
         </h2>
       </header>
-      <div className="max-w-xl text-center flex flex-col items-center justify-center-800 p-4">
+      <div className="max-w-2xl mx-auto text-center flex flex-col items-center p-4">
         {randomMedia && (
           <div className="mb-4">
             <img
               src={randomMedia}
-              alt="Art Not Found"
-              className="w-full aspect-video rounded-sm"
+              className="w-full max-w-xl aspect-video rounded-sm"
             />
           </div>
         )}
@@ -53,7 +52,7 @@ const NotFound: React.FC = () => {
         </p>
         <Link
           to="/"
-          className="inline-block px-6 py-3 border hover:bg-opacity-75 hover:text-opacity-75 transition-colors duration-300 rounded-sm"
+          className="inline-block px-6 py-3 border transition-transform duration-300 rounded-sm transform hover:-translate-y-1"
         >
           Return to Gallery
         </Link>
