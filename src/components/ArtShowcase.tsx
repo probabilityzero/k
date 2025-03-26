@@ -24,8 +24,8 @@ const ArtShowcase: React.FC<ArtDisplayProps> = ({ art }) => {
         </div>
       ) : (
         <div className="flex flex-col gap-8">
-          <MediaDisplay art={art} />
           <DetailsDisplay art={art} />
+          <MediaDisplay art={art} />
         </div>
       )}
     </div>
