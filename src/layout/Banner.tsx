@@ -26,7 +26,7 @@ const Banner: React.FC<BannerProps> = ({ title, subtitle, bgImageUrl }) => {
   };
 
   return (
-    <div className="relative w-full h-screen bg-black flex items-center justify-center overflow-hidden">
+    <div id="top" className="relative w-full h-screen bg-black flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
@@ -38,12 +38,12 @@ const Banner: React.FC<BannerProps> = ({ title, subtitle, bgImageUrl }) => {
         className="relative z-10 text-white px-4 pb-10"
         style={{ transform: `translateY(${offsetY * 0.3}px)` }}
       >
-        <div className="flex items-baseline justify-center">
-          <h1 className="text-3xl md:text-5xl font-bold inline-block px-2 py-1 bg-black">
+        <div className="flex items-baseline space-x-2 justify-center">
+          <h1 className="text-3xl md:text-5xl font-bold inline-block bg-black leading-none px-0.5">
             {title}
           </h1>
           {subtitle && (
-            <p className="text-lg md:text-2xl inline-block px-2 py-1 max-w-3xl mx-auto text-opacity-85 bg-black">
+            <p className="text-lg md:text-2xl inline-block max-w-3xl mx-auto text-opacity-85 bg-black px-0.5">
               {subtitle}
             </p>
           )}

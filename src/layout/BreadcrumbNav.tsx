@@ -8,25 +8,36 @@ interface MiniHeaderProps {
 const BreadcrumbNav: React.FC<MiniHeaderProps> = ({ title }) => {
   const location = useLocation(); // Get current route path
   const isCollectionPage = location.pathname.includes("/collections/");
-  const formattedTitle = title.toLowerCase().replace(/\s+/g, "-");
+
+  // Scroll to the top of the page function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="w-full mb-6">
       <nav className="space-x-2 md:space-x-4">
-        <Link to="/" className="font-semibold hover:underline px-1">K</Link>
+        <Link to="/" className="font-semibold hover:underline px-1">
+          K
+        </Link>
 
         {isCollectionPage && (
           <>
             <span className="mr-1">/</span>
-            <Link to="/collections" className="hover:underline">collections</Link>
+            <Link to="/collections" className="hover:underline">
+              collections
+            </Link>
           </>
         )}
 
         {/* Dynamic Page Title */}
         <span className="mr-1">:</span>
-        <Link to={isCollectionPage ? `/collections/${formattedTitle}` : `/miscellaneous/${formattedTitle}`} className="hover:underline">
+        <button
+          onClick={scrollToTop}
+          className="hover:underline focus:outline-none"
+        >
           {title.toLowerCase()}
-        </Link>
+        </button>
       </nav>
     </div>
   );

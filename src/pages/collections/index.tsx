@@ -24,7 +24,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         <div className="mb-4 z-10 lg:top-10 lg:mb-0 lg:mr-6 lg:w-1/6 lg:sticky lg:pb-32 items-start">
           <Link
             to={`/collections/${collectionUrl}`}
-            className="group inline-flex items-baseline text-3xl font-bold"
+            className="group inline-flex items-baseline text-3xl font-light hover:underline decoration-1"
           >
             {title}
             <svg
@@ -81,6 +81,15 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
 };
 
 const AllCollections: React.FC = () => {
+    useEffect(() => {
+      const section = document.getElementById("target-section");
+      if (section) {
+        section.scrollIntoView();
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }, []);
+  
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
@@ -104,8 +113,8 @@ const AllCollections: React.FC = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent" />
         <div
-          className="relative z-10 text-center text-white px-4"
-          style={{ transform: `translateY(${offset * 0.3}px)` }} 
+          className="relative z-10  text-white px-4"
+          style={{ transform: `translateY(${offset * 0.4}px)` }} 
         >
           <h1 className="text-3xl md:text-5xl font-bold inline-block px-2 py-1">
             collections
@@ -117,10 +126,10 @@ const AllCollections: React.FC = () => {
       </div>
 
       <div className="max-w-6xl mx-auto p-4">
-        <CollectionSection title="Machines" collection="machines" />
-        <CollectionSection title="Patterns" collection="patterns" />
-        <CollectionSection title="Audiovisual" collection="audiovisual" />
-        <CollectionSection title="Misc." collection="miscellaneous" />
+        <CollectionSection title="machines" collection="machines" />
+        <CollectionSection title="patterns" collection="patterns" />
+        <CollectionSection title="audiovisual" collection="audiovisual" />
+        <CollectionSection title="misc" collection="miscellaneous" />
       </div>
     </div>
   );

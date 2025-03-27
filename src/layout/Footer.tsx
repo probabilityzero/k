@@ -29,7 +29,7 @@ export const HomeFooter: React.FC = () => {
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="p-4 relative">
+    <footer className="m-4 relative">
       <div className="container mx-auto relative">
         {/* Left and Right Navigation Container */}
         <div className="flex justify-between items-center w-full py-1">
