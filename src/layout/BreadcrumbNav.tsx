@@ -1,0 +1,35 @@
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+
+interface MiniHeaderProps {
+  title: string; // The current page title, e.g., "Collection Name"
+}
+
+const BreadcrumbNav: React.FC<MiniHeaderProps> = ({ title }) => {
+  const location = useLocation(); // Get current route path
+  const isCollectionPage = location.pathname.includes("/collections/");
+  const formattedTitle = title.toLowerCase().replace(/\s+/g, "-");
+
+  return (
+    <div className="w-full mb-6">
+      <nav className="space-x-2 md:space-x-4">
+        <Link to="/" className="font-semibold hover:underline px-1">K</Link>
+
+        {isCollectionPage && (
+          <>
+            <span className="mr-1">/</span>
+            <Link to="/collections" className="hover:underline">collections</Link>
+          </>
+        )}
+
+        {/* Dynamic Page Title */}
+        <span className="mr-1">:</span>
+        <Link to={isCollectionPage ? `/collections/${formattedTitle}` : `/miscellaneous/${formattedTitle}`} className="hover:underline">
+          {title.toLowerCase()}
+        </Link>
+      </nav>
+    </div>
+  );
+};
+
+export default BreadcrumbNav;

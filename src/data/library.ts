@@ -144,6 +144,16 @@ export const artCollection: ArtData[] = [
         type: "image",
         url: placeholderImg,
         alt: "Cyber Core detail"
+      },
+      {
+        type: "image",
+        url: placeholderImg,
+        alt: "Cyber Core detail"
+      },
+      {
+        type: "image",
+        url: placeholderImg,
+        alt: "Cyber Core detail"
       }
     ],
     saleInfo: {

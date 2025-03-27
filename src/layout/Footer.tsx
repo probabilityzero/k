@@ -35,11 +35,10 @@ export const Footer: React.FC = () => {
         <div className="flex justify-between items-center w-full py-1">
           {/* Left Navigation */}
           <div className="flex space-x-2 md:space-x-4">
-            <Link to="/" className="hover:underline font-light px-1">
-              {/* /K / */}
+            <Link to="/" className="hover:underline font-semibold px-1">
               K
             </Link>
-            <span className='mr-1'>∶</span>
+            <span className='mr-1'>/</span>
             <Link to="/collections" className="hover:underline">
               collections
             </Link>

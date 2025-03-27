@@ -1,6 +1,6 @@
 // src/pages/AllCollections.tsx
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArtData, artCollection } from "../../data/library";
 
@@ -21,7 +21,6 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
   return (
     <section className="my-8">
       <div className="flex flex-col lg:flex-row">
-        {/* Header Section */}
         <div className="mb-4 z-10 lg:top-10 lg:mb-0 lg:mr-6 lg:w-1/6 lg:sticky lg:pb-32 items-start">
           <Link
             to={`/collections/${collectionUrl}`}
@@ -45,7 +44,6 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
           </Link>
         </div>
 
-        {/* Items Grid */}
         <div className="lg:w-5/6 grid grid-cols-1 md:grid-cols-2 gap-6">
           {data.map((art) => (
             <Link
@@ -53,7 +51,6 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
               to={`/No.${art.id}`}
               className="block border-opacity-50 rounded-sm overflow-hidden"
             >
-              {/* Square container */}
               <div className="w-full aspect-square overflow-hidden">
                 {art.thumbUrl ? (
                   <img
@@ -84,30 +81,32 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
 };
 
 const AllCollections: React.FC = () => {
+  const [offset, setOffset] = useState(0);
+
   useEffect(() => {
-    const section = document.getElementById("target-section");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    const handleScroll = () => {
+      setOffset(window.scrollY * 0.5); 
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <div>
-      {/* Inline Banner */}
-      <div className="relative w-full h-[50vh] flex flex-col items-center justify-center">
-        {/* Background image */}
+      <div className="relative w-full h-[50vh] flex flex-col items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url("")',
           }}
         />
-        {/* Gradient overlay fading toward the bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent" />
-        {/* Centered text */}
-        <div className="relative z-10 text-center text-white px-4">
+        <div
+          className="relative z-10 text-center text-white px-4"
+          style={{ transform: `translateY(${offset * 0.3}px)` }} 
+        >
           <h1 className="text-3xl md:text-5xl font-bold inline-block px-2 py-1">
             collections
           </h1>
@@ -117,7 +116,6 @@ const AllCollections: React.FC = () => {
         </div>
       </div>
 
-      {/* Collection sections start right below the banner */}
       <div className="max-w-6xl mx-auto p-4">
         <CollectionSection title="Machines" collection="machines" />
         <CollectionSection title="Patterns" collection="patterns" />

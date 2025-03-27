@@ -2,8 +2,10 @@
 
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Banner from "../../../components/Banner";
+import Banner from "../../../layout/Banner";
 import { ArtData, artCollection, collections } from "../../../data/library";
+import NotFound from "../../../utils/NotFound";
+import BreadcrumbNav from "../../../layout/BreadcrumbNav";
 
 const CollectionPage: React.FC = () => {
   // Get the collectionUrl parameter from the URL
@@ -44,9 +46,11 @@ const CollectionPage: React.FC = () => {
         bgImageUrl={meta.bgImageUrl}
       />
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div id="content-section" className="max-w-7xl mx-auto px-4 py-8">
+        <BreadcrumbNav title={meta.title}/>
+        
         {filteredArt.length === 0 ? (
-          <p className="text-center text-lg">No art found in this collection.</p>
+          <NotFound />
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {filteredArt.map((data) => (

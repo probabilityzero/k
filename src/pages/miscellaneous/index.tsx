@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Banner from "../../components/Banner";
-import { ArtData, artCollection, collections } from "../../data/library"; // Corrected import path
+import Banner from "../../layout/Banner";
+import { ArtData, artCollection, collections } from "../../data/library";
+import BreadcrumbNav from "../../layout/BreadcrumbNav";
 
 const Miscellaneous: React.FC = () => {
   useEffect(() => {
@@ -32,7 +33,10 @@ const Miscellaneous: React.FC = () => {
         bgImageUrl={meta.bgImageUrl}
       />
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+
+<div id="content-section" className="max-w-7xl mx-auto px-4 py-8">
+        <BreadcrumbNav title={meta.title}/>
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {miscData.map((data) => (
             <Link
