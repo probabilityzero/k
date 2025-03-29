@@ -15,10 +15,10 @@
   --text: #fff;
 }
 
-[data-theme='gray'] {
+/* [data-theme='gray'] {
   --bg: #363636;   
   --text: #bd9cb8; 
-}
+} */
 
 /* [data-theme='gray'] {
   --bg: #2B2D42;   
@@ -37,12 +37,12 @@
 } */
 
 /* Lavender Theme */
-/* [data-theme='gray'] {
+[data-theme='gray'] {
   --bg: #574F59; 
-  --text: #F5E6FF;
-} */
+  --text: #f8e9da;
+}
 
-/* bllue */
+/* blue */
 /* [data-theme='gray'] {
   --bg: #2C3E50; 
   --text: #F5E6FF; 
