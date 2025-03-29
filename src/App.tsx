@@ -9,6 +9,8 @@ import Exhibitions from "./pages/exhibitions";
 import About from "./pages/about";
 import Miscellaneous from "./pages/miscellaneous";
 import GalleryScroll from "./pages/gallery";
+import ProcessingPage from "./pages/artworks/[processingUrl]";
+import ArtworksPage from "./pages/artworks";
 
 function App() {
   const location = useLocation();
@@ -21,6 +23,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/:artUrl" element={<ArtPage />} />
             <Route path="/collections" element={<AllCollections />} />
+            <Route path="/artworks/" element={<ArtworksPage />} />
+            <Route path="/artworks/:processingUrl" element={<ProcessingPage />} />
             <Route path="/collections/:collectionUrl" element={<CollectionPage />} />
             <Route path="/4d" element={<GalleryScroll />} />
             <Route path="/miscellaneous" element={<Miscellaneous />} />
