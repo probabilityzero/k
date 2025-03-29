@@ -9,7 +9,7 @@ export const HomeFooter: React.FC = () => {
         {/* Left and Right Navigation Container */}
         <div className="flex justify-between items-center w-full py-1">
           {/* Left Navigation */}
-          <div className="flex space-x-2 md:space-x-4">
+          <div className="flex space-x-3 md:space-x-4">
             <Link to="/" className="hover:underline">
              ​
             </Link>
@@ -34,16 +34,19 @@ export const Footer: React.FC = () => {
         {/* Left and Right Navigation Container */}
         <div className="flex justify-between items-center w-full py-1">
           {/* Left Navigation */}
-          <div className="flex space-x-2 md:space-x-4">
-            <Link to="/" className="hover:underline font-semibold px-1">
-              K
+          <div className="flex space-x-3 md:space-x-4">
+            <Link to="/">
+            <span className='hover:underline font-semibold'>K</span>
+            <span className='ml-3 md:ml-4'>/</span>
             </Link>
-            <span className='mr-1'>/</span>
+            
             <Link to="/collections" className="hover:underline">
               collections
             </Link>
-            <div className="hidden space-x-4">
-              <Link to="/collections/machines" className="hover:underline">
+            <Link to="/miscellaneous" className="hover:underline">
+              misc
+            </Link>
+              {/* <Link to="/collections/machines" className="hover:underline">
                 machines
               </Link>
               <Link to="/collections/patterns" className="hover:underline">
@@ -51,11 +54,7 @@ export const Footer: React.FC = () => {
               </Link>
               <Link to="/collections/audiovisual" className="hover:underline">
                 audiovisual
-              </Link>
-            </div>
-            <Link to="/miscellaneous" className="hover:underline">
-              misc
-            </Link>
+              </Link> */}
           </div>
 
           {/* Centered ThemeToggle */}
@@ -66,7 +65,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Right Navigation */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-3 md:space-x-4">
             <Link to="/exhibitions" className="hover:underline">
               exhibitions
             </Link>

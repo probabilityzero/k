@@ -131,16 +131,16 @@ const Home: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col pt-8">
+    <div className="flex flex-col">
       {/* Header / Logo */}
-      <header className="flex justify-center items-center">
+      <header className="flex justify-center py-6 md:py-10 items-center">
         <div className="text-3xl font-semibold">
           K
         </div>
       </header>
 
       {/* Main content with extra bottom padding */}
-      <main className="flex pt-10 lg:pt-16 relative">
+      <main className="flex p-4 relative">
         <div className="max-w-7xl mx-auto">
           {/* Upper row items */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8 pb-6 lg:pb-8">
@@ -166,7 +166,7 @@ const Home: React.FC = () => {
           </div>
 
           {/* Second row items */}
-          <div className="flex justify-end gap-6 lg:gap-8 pb-8">
+          <div className="flex justify-end gap-6 lg:gap-8">
             {secondRowItems.map((item, index) =>
               item.wide ? (
                 <CardWideItems

@@ -113,7 +113,7 @@ const AllCollections: React.FC = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent" />
         <div
-          className="relative z-10  text-white px-4"
+          className="relative z-10 px-4"
           style={{ transform: `translateY(${offset * 0.4}px)` }} 
         >
           <h1 className="text-3xl md:text-5xl font-bold inline-block px-2 py-1">

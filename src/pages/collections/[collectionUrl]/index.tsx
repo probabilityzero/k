@@ -39,7 +39,7 @@ const CollectionPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-dvh">
       <Banner
         title={meta.title}
         subtitle={meta.subtitle}
